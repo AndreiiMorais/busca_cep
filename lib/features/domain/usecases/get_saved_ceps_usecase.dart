@@ -1,16 +1,16 @@
 import 'package:busca_cep/features/domain/entities/cep_entity.dart';
 import 'package:busca_cep/features/domain/repositories/cep_repository.dart';
 
-abstract class GetSearchedCepsListUsecase {
+abstract class GetSavedCepsUsecase {
   Future<List<CepEntity>> call();
 }
 
-class GetSearchedCepsListUsecaseImpl implements GetSearchedCepsListUsecase {
+class GetSavedCepsUsecaseImpl implements GetSavedCepsUsecase {
   final CepRepository repository;
 
-  GetSearchedCepsListUsecaseImpl(this.repository);
+  GetSavedCepsUsecaseImpl(this.repository);
   @override
   Future<List<CepEntity>> call() async {
-    return await repository.getSearchedCepsList();
+    return repository.getSavedCeps();
   }
 }

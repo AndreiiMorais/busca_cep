@@ -5,5 +5,7 @@ import 'package:dartz/dartz.dart';
 abstract class CepRepository {
   Future<Either<Failure, CepEntity>> searchCep(String cep);
 
-  Future<List<CepEntity>> getSearchedCepsList();
+  Future<Either<Failure, bool>> saveCep(CepEntity cep);
+
+  List<CepEntity> getSavedCeps();
 }
