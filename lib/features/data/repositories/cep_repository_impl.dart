@@ -1,44 +1,31 @@
 import 'package:busca_cep/core/errors/failures.dart';
 import 'package:busca_cep/core/errors/server_exceptions.dart';
-import 'package:busca_cep/features/data/repositories/search_cep_datasource.dart';
+import 'package:busca_cep/features/data/datasources/api/search_cep_datasource.dart';
+import 'package:busca_cep/features/data/datasources/local/hive_datasource.dart';
 import 'package:busca_cep/features/domain/entities/cep_entity.dart';
 import 'package:busca_cep/features/domain/repositories/cep_repository.dart';
 import 'package:dartz/dartz.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 
 class CepRepositoryImpl implements CepRepository {
-  final Box<CepEntity> box;
+  final HiveDatasource localDatasource;
   final SearchCepDatasource datasource;
 
   CepRepositoryImpl({
-    required this.box,
+    required this.localDatasource,
     required this.datasource,
   });
   @override
-  List<CepEntity> getSavedCeps() {
-    return box.values.toList();
+  Either<Failure, List<CepEntity>> getSavedCeps() {
+    return localDatasource.getSavedCeps();
   }
 
   @override
   Future<Either<Failure, bool>> saveCep(CepEntity cep) async {
-    if (box.containsKey(cep.cep)) {
-      return const Left(DuplicatedKeyFailure());
-    }
-    await box.put(cep.cep, cep);
-    return const Right(true);
+    return localDatasource.saveCep(cep);
   }
 
   @override
-  Future<Either<Failure, CepEntity>> searchCep(String cep) async {
-    try {
-      final result = await datasource(cep);
-      return Right(result);
-    } on NotFoundException catch (e) {
-      return Left(NotFoundFailure(message: e.message));
-    } on BadRequestException catch (e) {
-      return Left(BadInputFailure(message: e.message));
-    } on Exception {
-      return const Left(UnknownDatasourceFailure());
-    }
+  Future<Either<ServerException, CepEntity>> searchCep(String cep) async {
+    return await datasource(cep);
   }
 }

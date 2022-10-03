@@ -1,10 +1,12 @@
 import 'dart:convert';
 
+import 'package:busca_cep/core/clients/http_client.dart';
 import 'package:busca_cep/core/errors/server_exceptions.dart';
-import 'package:busca_cep/core/http_clients/http_client.dart';
-import 'package:busca_cep/features/data/datasources/endpoints/viacep_endpoints.dart';
+import 'package:busca_cep/features/data/datasources/api/search_cep_datasource.dart';
 import 'package:busca_cep/features/data/models/cep_model.dart';
-import 'package:busca_cep/features/data/repositories/search_cep_datasource.dart';
+import 'package:dartz/dartz.dart';
+
+import 'endpoints/viacep_endpoints.dart';
 
 class ViaCepDatasourceImpl implements SearchCepDatasource {
   final HttpClient client;
@@ -12,22 +14,24 @@ class ViaCepDatasourceImpl implements SearchCepDatasource {
   ViaCepDatasourceImpl(this.client);
 
   @override
-  Future<CepModel> call(String cep) async {
+  Future<Either<ServerException, CepModel>> call(String cep) async {
     final response = await client.get(ViacepEndpoints.searchCep(cep));
 
     if (response.statusCode != 200) {
-      throw _errors[response.statusCode] ??
-          UnknownDatasourceException(
-            message: 'code: ${response.statusCode}',
-          );
+      return Left(
+        _errors[response.statusCode] ??
+            UnknownDatasourceException(
+              message: 'code: ${response.statusCode}',
+            ),
+      );
     }
 
     final decodedResponse = jsonDecode(response.data);
     if (decodedResponse['erro'] != null) {
-      throw _errors[response.statusCode]!;
+      return Left(_errors[response.statusCode]!) ;
     }
 
-    return CepModel.fromJson(decodedResponse);
+    return Right(CepModel.fromJson(decodedResponse));
   }
 
   final Map<int, ServerException> _errors = {

@@ -1,13 +1,14 @@
+import 'package:busca_cep/core/clients/http_client.dart';
 import 'package:busca_cep/core/errors/server_exceptions.dart';
-import 'package:busca_cep/core/http_clients/http_client.dart';
-import 'package:busca_cep/features/data/datasources/viacep_datasource_impl.dart';
+import 'package:busca_cep/features/data/datasources/api/search_cep_datasource.dart';
+import 'package:busca_cep/features/data/datasources/api/viacep_datasource_impl.dart';
 import 'package:busca_cep/features/data/models/cep_model.dart';
-import 'package:busca_cep/features/data/repositories/search_cep_datasource.dart';
 import 'package:busca_cep/features/domain/entities/cep_entity.dart';
+import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-import '../../../utils/mock_constants.dart';
+import '../../../../utils/mock_constants.dart';
 
 class MockHttpClient extends Mock implements HttpClient {}
 
@@ -55,8 +56,9 @@ void main() {
       final result = await datasource('99999999');
 
       //Assert
-      expect(result, isA<CepEntity>());
-      expect(result, isA<CepModel>());
+      expect(result.isRight(), isTrue);
+      expect(result.fold(id, id), isA<CepEntity>());
+      expect(result.fold(id, id), isA<CepModel>());
       verify(() => client.get(any())).called(1);
     },
   );
@@ -70,11 +72,13 @@ void main() {
             data: MockConstants.cepBadRequestResponse, statusCode: 200),
       );
 
+      //Act
+      final result = await datasource('9999999');
+
       //Assert
-      await expectLater(
-        datasource('99999999'),
-        throwsA(isA<BadRequestException>()),
-      );
+      expect(result.isLeft(), isTrue);
+      expect(result.fold(id, id), isA<ServerException>());
+      expect(result.fold(id, id), isA<NotFoundException>());
       verify(() => client.get(any())).called(1);
     },
   );
@@ -90,8 +94,13 @@ void main() {
         ),
       );
 
+      //Act
+      final result = await datasource('9999999');
+
       //Assert
-      await expectLater(datasource('any'), throwsA(isA<NotFoundException>()));
+      expect(result.isLeft(), isTrue);
+      expect(result.fold(id, id), isA<ServerException>());
+      expect(result.fold(id, id), isA<BadRequestException>());
       verify(() => client.get(any())).called(1);
     },
   );
@@ -107,11 +116,13 @@ void main() {
       ),
     );
 
+    //Act
+    final result = await datasource('9999999');
+
     //Assert
-    await expectLater(
-      datasource('any'),
-      throwsA(isA<UnknownDatasourceException>()),
-    );
+    expect(result.isLeft(), isTrue);
+    expect(result.fold(id, id), isA<ServerException>());
+    expect(result.fold(id, id), isA<UnknownDatasourceException>());
     verify(() => client.get(any())).called(1);
   });
 }

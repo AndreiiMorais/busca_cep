@@ -1,4 +1,5 @@
-import 'package:busca_cep/core/http_clients/http_client.dart';
+
+import 'package:busca_cep/core/clients/http_client.dart';
 import 'package:http/http.dart' as http;
 
 class HttpClientImpl implements HttpClient {

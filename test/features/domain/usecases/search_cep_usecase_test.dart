@@ -1,4 +1,5 @@
 import 'package:busca_cep/core/errors/failures.dart';
+import 'package:busca_cep/core/errors/server_exceptions.dart';
 import 'package:busca_cep/features/domain/entities/cep_entity.dart';
 import 'package:busca_cep/features/domain/repositories/cep_repository.dart';
 import 'package:busca_cep/features/domain/usecases/search_cep_usecase.dart';
@@ -8,14 +9,18 @@ import 'package:mocktail/mocktail.dart';
 
 class MockCepRepository extends Mock implements CepRepository {}
 
+class MockServerException extends Mock implements ServerException {}
+
 class MockCepEntity extends Mock implements CepEntity {}
 
 void main() {
   late CepRepository repository;
   late SearchCepUsecase usecase;
   late CepEntity entity;
+  late ServerException exception;
 
   setUp(() {
+    exception = MockServerException();
     entity = MockCepEntity();
     repository = MockCepRepository();
     usecase = SearchCepUsecaseImpl(repository);
@@ -41,43 +46,20 @@ void main() {
   );
 
   test(
-    'Should return a CepLengthFailure when called with less than 8 numbers',
-    () async {
+    "Should return left ServerException when receives a server exception form repository",
+    () async{
+      //Arrange
+      when(() => repository.searchCep(any())).thenAnswer(
+        (_) async => Left(exception),
+      );
+
       //Act
-      final result = await usecase('123456');
+      final result = await usecase('12345678');
 
       //Assert
       expect(result.isLeft(), isTrue);
-      expect(result.fold(id, id), isA<Failure>());
-      expect(result.fold(id, id), isA<CepLengthFailure>());
-      verifyNever(() => repository.searchCep(any()));
-    },
-  );
-  test(
-    'Should return a CepLengthFailure when called with more than 8 numbers',
-    () async {
-      //Act
-      final result = await usecase('123456789');
-
-      //Assert
-      expect(result.isLeft(), isTrue);
-      expect(result.fold(id, id), isA<Failure>());
-      expect(result.fold(id, id), isA<CepLengthFailure>());
-      verifyNever(() => repository.searchCep(any()));
-    },
-  );
-
-  test(
-    'Should return a BadInputFailure when called with non numbers',
-    () async {
-      //Act
-      final result = await usecase('test');
-
-      //Assert
-      expect(result.isLeft(), isTrue);
-      expect(result.fold(id, id), isA<Failure>());
-      expect(result.fold(id, id), isA<BadInputFailure>());
-      verifyNever(() => repository.searchCep(any()));
+      expect(result.fold(id, id), isA<ServerException>());
+      verify(() => repository.searchCep('12345678')).called(1);
     },
   );
 }

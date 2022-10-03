@@ -1,8 +1,10 @@
+import 'package:busca_cep/core/errors/failures.dart';
 import 'package:busca_cep/features/domain/entities/cep_entity.dart';
 import 'package:busca_cep/features/domain/repositories/cep_repository.dart';
+import 'package:dartz/dartz.dart';
 
 abstract class GetSavedCepsUsecase {
-  Future<List<CepEntity>> call();
+  Either<Failure, List<CepEntity>> call();
 }
 
 class GetSavedCepsUsecaseImpl implements GetSavedCepsUsecase {
@@ -10,7 +12,7 @@ class GetSavedCepsUsecaseImpl implements GetSavedCepsUsecase {
 
   GetSavedCepsUsecaseImpl(this.repository);
   @override
-  Future<List<CepEntity>> call() async {
+  Either<Failure, List<CepEntity>> call() {
     return repository.getSavedCeps();
   }
 }
