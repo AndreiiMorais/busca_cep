@@ -10,6 +10,7 @@ import 'package:busca_cep/features/domain/repositories/cep_repository.dart';
 import 'package:busca_cep/features/domain/usecases/get_saved_ceps_usecase.dart';
 import 'package:busca_cep/features/domain/usecases/save_cep_usecase.dart';
 import 'package:busca_cep/features/domain/usecases/search_cep_usecase.dart';
+import 'package:busca_cep/features/presenter/bloc/cep_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -17,20 +18,26 @@ GetIt serviceLocator = GetIt.instance;
 
 class Injector {
   static Future<void> init() async {
+    //HiveAdapters
+    Hive.registerAdapter(CepEntityAdapter());
+
+    //HiveBoxes
     await Hive.openBox<CepEntity>('cep');
+    serviceLocator.registerSingleton<Box<CepEntity>>(Hive.box('cep'));
+
     //Clients
-    serviceLocator.registerLazySingleton<HttpClient>(() => HttpClientImpl());
+    serviceLocator.registerFactory<HttpClient>(() => HttpClientImpl());
 
     //Datasources
-    serviceLocator.registerLazySingleton<HiveDatasource>(
-      () => HiveDatasourceImpl(Hive.box('cep')),
+    serviceLocator.registerFactory<HiveDatasource>(
+      () => HiveDatasourceImpl(serviceLocator()),
     );
-    serviceLocator.registerLazySingleton<SearchCepDatasource>(
+    serviceLocator.registerFactory<SearchCepDatasource>(
       () => ViaCepDatasourceImpl(serviceLocator()),
     );
 
     //Repositories
-    serviceLocator.registerLazySingleton<CepRepository>(
+    serviceLocator.registerFactory<CepRepository>(
       () => CepRepositoryImpl(
         datasource: serviceLocator(),
         localDatasource: serviceLocator(),
@@ -38,16 +45,17 @@ class Injector {
     );
 
     //Usecases
-    serviceLocator.registerLazySingleton<GetSavedCepsUsecase>(
+    serviceLocator.registerFactory<GetSavedCepsUsecase>(
       () => GetSavedCepsUsecaseImpl(serviceLocator()),
     );
-    serviceLocator.registerLazySingleton<SaveCepUsecase>(
+    serviceLocator.registerFactory<SaveCepUsecase>(
       () => SaveCepUsecaseImpl(serviceLocator()),
     );
-    serviceLocator.registerLazySingleton<SearchCepUsecase>(
+    serviceLocator.registerFactory<SearchCepUsecase>(
       () => SearchCepUsecaseImpl(serviceLocator()),
     );
 
     //Controllers
+    serviceLocator.registerSingleton<CepBloc>(CepBloc());
   }
 }

@@ -2,14 +2,22 @@ import 'package:busca_cep/features/domain/entities/cep_entity.dart';
 
 class CepModel extends CepEntity {
   const CepModel({
-    required super.cep,
-    required super.publicPlace,
-    required super.complement,
-    required super.district,
-    required super.city,
-    required super.uf,
-    required super.ddd,
-  });
+    required String cep,
+    required String publicPlace,
+    required String complement,
+    required String district,
+    required String city,
+    required String uf,
+    required String ddd,
+  }) : super(
+          cep: cep,
+          publicPlace: publicPlace,
+          complement: complement,
+          district: district,
+          city: city,
+          uf: uf,
+          ddd: ddd,
+        );
 
   factory CepModel.fromJson(Map<String, dynamic> json) => CepModel(
         cep: json['cep'] as String,
