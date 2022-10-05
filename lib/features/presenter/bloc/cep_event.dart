@@ -6,4 +6,6 @@ class CepEvent with _$CepEvent {
   const factory CepEvent.saveCep(CepEntity cep) = _SaveCep;
   const factory CepEvent.loadSavedDistricts() = _LoadSavedDistricts;
   const factory CepEvent.loadSavedCeps(String district) = _LoadSavedCeps;
+  const factory CepEvent.openInMap(CepEntity ceps) = _OpenInMap;
+  
 }

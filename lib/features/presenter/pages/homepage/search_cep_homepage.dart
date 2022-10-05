@@ -1,6 +1,6 @@
 import 'package:busca_cep/features/domain/entities/cep_entity.dart';
 import 'package:busca_cep/features/presenter/bloc/cep_bloc.dart';
-import 'package:busca_cep/features/presenter/widgets/dialogs/search_result_dialog/search_result_dialog.dart';
+import 'package:busca_cep/features/presenter/widgets/dialogs/cep_info_dialog/cep_info_dialog.dart';
 import 'package:busca_cep/features/presenter/widgets/loader/loader.dart';
 import 'package:busca_cep/features/presenter/widgets/snackbars/error_snackbar/error_snackbar.dart';
 import 'package:busca_cep/features/presenter/widgets/snackbars/save_success_snackbar/save_success_snackbar.dart';
@@ -68,11 +68,22 @@ class _SearchCepHomepageState extends State<SearchCepHomepage> {
             error = null;
             context.hideLoader();
             _controller.clear();
-            showSearchResultDialog(
+            showCepInfoDialog(
               context: context,
               cep: cep,
-              onDiscardPressed: () => Navigator.of(context).pop(),
-              onSavePressed: () => _bloc.add(CepEvent.saveCep(cep)),
+              primaryButton: TextButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: Text(
+                  'Descartar',
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                ),
+              ),
+              secondaryButton: ElevatedButton(
+                onPressed: () => _bloc.add(CepEvent.saveCep(cep)),
+                child: const Text('Salvar Cep'),
+              ),
             );
           },
           loadingCep: () {
@@ -97,8 +108,16 @@ class _SearchCepHomepageState extends State<SearchCepHomepage> {
               itemBuilder: (context) {
                 return [
                   PopupMenuItem<String>(
-                    onTap: () => serviceLocator<Box<CepEntity>>().clear(),
-                    child: const Text('wipe hive'),
+                    onTap: () {
+                      serviceLocator<Box<CepEntity>>().clear();
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SaveSuccessSnackbar(
+                          context: context,
+                          message: 'Ceps salvos deletados com sucesso',
+                        ),
+                      );
+                    },
+                    child: const Text('Deletar Ceps salvos'),
                   )
                 ];
               },

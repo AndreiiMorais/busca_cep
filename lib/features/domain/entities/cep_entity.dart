@@ -3,7 +3,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 part 'cep_entity.g.dart';
 
-@HiveType(typeId: 1)
+@HiveType(typeId: 0)
 class CepEntity extends Equatable {
   @HiveField(0)
   final String cep;

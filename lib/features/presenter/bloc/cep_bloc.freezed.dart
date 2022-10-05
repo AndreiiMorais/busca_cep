@@ -22,6 +22,7 @@ mixin _$CepEvent {
     required TResult Function(CepEntity cep) saveCep,
     required TResult Function() loadSavedDistricts,
     required TResult Function(String district) loadSavedCeps,
+    required TResult Function(CepEntity ceps) openInMap,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$CepEvent {
     TResult Function(CepEntity cep)? saveCep,
     TResult Function()? loadSavedDistricts,
     TResult Function(String district)? loadSavedCeps,
+    TResult Function(CepEntity ceps)? openInMap,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$CepEvent {
     TResult Function(CepEntity cep)? saveCep,
     TResult Function()? loadSavedDistricts,
     TResult Function(String district)? loadSavedCeps,
+    TResult Function(CepEntity ceps)? openInMap,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$CepEvent {
     required TResult Function(_SaveCep value) saveCep,
     required TResult Function(_LoadSavedDistricts value) loadSavedDistricts,
     required TResult Function(_LoadSavedCeps value) loadSavedCeps,
+    required TResult Function(_OpenInMap value) openInMap,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$CepEvent {
     TResult Function(_SaveCep value)? saveCep,
     TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
     TResult Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult Function(_OpenInMap value)? openInMap,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$CepEvent {
     TResult Function(_SaveCep value)? saveCep,
     TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
     TResult Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult Function(_OpenInMap value)? openInMap,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -151,6 +157,7 @@ class _$_LoadCepInfo implements _LoadCepInfo {
     required TResult Function(CepEntity cep) saveCep,
     required TResult Function() loadSavedDistricts,
     required TResult Function(String district) loadSavedCeps,
+    required TResult Function(CepEntity ceps) openInMap,
   }) {
     return loadCepInfo(cep);
   }
@@ -162,6 +169,7 @@ class _$_LoadCepInfo implements _LoadCepInfo {
     TResult Function(CepEntity cep)? saveCep,
     TResult Function()? loadSavedDistricts,
     TResult Function(String district)? loadSavedCeps,
+    TResult Function(CepEntity ceps)? openInMap,
   }) {
     return loadCepInfo?.call(cep);
   }
@@ -173,6 +181,7 @@ class _$_LoadCepInfo implements _LoadCepInfo {
     TResult Function(CepEntity cep)? saveCep,
     TResult Function()? loadSavedDistricts,
     TResult Function(String district)? loadSavedCeps,
+    TResult Function(CepEntity ceps)? openInMap,
     required TResult orElse(),
   }) {
     if (loadCepInfo != null) {
@@ -188,6 +197,7 @@ class _$_LoadCepInfo implements _LoadCepInfo {
     required TResult Function(_SaveCep value) saveCep,
     required TResult Function(_LoadSavedDistricts value) loadSavedDistricts,
     required TResult Function(_LoadSavedCeps value) loadSavedCeps,
+    required TResult Function(_OpenInMap value) openInMap,
   }) {
     return loadCepInfo(this);
   }
@@ -199,6 +209,7 @@ class _$_LoadCepInfo implements _LoadCepInfo {
     TResult Function(_SaveCep value)? saveCep,
     TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
     TResult Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult Function(_OpenInMap value)? openInMap,
   }) {
     return loadCepInfo?.call(this);
   }
@@ -210,6 +221,7 @@ class _$_LoadCepInfo implements _LoadCepInfo {
     TResult Function(_SaveCep value)? saveCep,
     TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
     TResult Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult Function(_OpenInMap value)? openInMap,
     required TResult orElse(),
   }) {
     if (loadCepInfo != null) {
@@ -295,6 +307,7 @@ class _$_SaveCep implements _SaveCep {
     required TResult Function(CepEntity cep) saveCep,
     required TResult Function() loadSavedDistricts,
     required TResult Function(String district) loadSavedCeps,
+    required TResult Function(CepEntity ceps) openInMap,
   }) {
     return saveCep(cep);
   }
@@ -306,6 +319,7 @@ class _$_SaveCep implements _SaveCep {
     TResult Function(CepEntity cep)? saveCep,
     TResult Function()? loadSavedDistricts,
     TResult Function(String district)? loadSavedCeps,
+    TResult Function(CepEntity ceps)? openInMap,
   }) {
     return saveCep?.call(cep);
   }
@@ -317,6 +331,7 @@ class _$_SaveCep implements _SaveCep {
     TResult Function(CepEntity cep)? saveCep,
     TResult Function()? loadSavedDistricts,
     TResult Function(String district)? loadSavedCeps,
+    TResult Function(CepEntity ceps)? openInMap,
     required TResult orElse(),
   }) {
     if (saveCep != null) {
@@ -332,6 +347,7 @@ class _$_SaveCep implements _SaveCep {
     required TResult Function(_SaveCep value) saveCep,
     required TResult Function(_LoadSavedDistricts value) loadSavedDistricts,
     required TResult Function(_LoadSavedCeps value) loadSavedCeps,
+    required TResult Function(_OpenInMap value) openInMap,
   }) {
     return saveCep(this);
   }
@@ -343,6 +359,7 @@ class _$_SaveCep implements _SaveCep {
     TResult Function(_SaveCep value)? saveCep,
     TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
     TResult Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult Function(_OpenInMap value)? openInMap,
   }) {
     return saveCep?.call(this);
   }
@@ -354,6 +371,7 @@ class _$_SaveCep implements _SaveCep {
     TResult Function(_SaveCep value)? saveCep,
     TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
     TResult Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult Function(_OpenInMap value)? openInMap,
     required TResult orElse(),
   }) {
     if (saveCep != null) {
@@ -417,6 +435,7 @@ class _$_LoadSavedDistricts implements _LoadSavedDistricts {
     required TResult Function(CepEntity cep) saveCep,
     required TResult Function() loadSavedDistricts,
     required TResult Function(String district) loadSavedCeps,
+    required TResult Function(CepEntity ceps) openInMap,
   }) {
     return loadSavedDistricts();
   }
@@ -428,6 +447,7 @@ class _$_LoadSavedDistricts implements _LoadSavedDistricts {
     TResult Function(CepEntity cep)? saveCep,
     TResult Function()? loadSavedDistricts,
     TResult Function(String district)? loadSavedCeps,
+    TResult Function(CepEntity ceps)? openInMap,
   }) {
     return loadSavedDistricts?.call();
   }
@@ -439,6 +459,7 @@ class _$_LoadSavedDistricts implements _LoadSavedDistricts {
     TResult Function(CepEntity cep)? saveCep,
     TResult Function()? loadSavedDistricts,
     TResult Function(String district)? loadSavedCeps,
+    TResult Function(CepEntity ceps)? openInMap,
     required TResult orElse(),
   }) {
     if (loadSavedDistricts != null) {
@@ -454,6 +475,7 @@ class _$_LoadSavedDistricts implements _LoadSavedDistricts {
     required TResult Function(_SaveCep value) saveCep,
     required TResult Function(_LoadSavedDistricts value) loadSavedDistricts,
     required TResult Function(_LoadSavedCeps value) loadSavedCeps,
+    required TResult Function(_OpenInMap value) openInMap,
   }) {
     return loadSavedDistricts(this);
   }
@@ -465,6 +487,7 @@ class _$_LoadSavedDistricts implements _LoadSavedDistricts {
     TResult Function(_SaveCep value)? saveCep,
     TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
     TResult Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult Function(_OpenInMap value)? openInMap,
   }) {
     return loadSavedDistricts?.call(this);
   }
@@ -476,6 +499,7 @@ class _$_LoadSavedDistricts implements _LoadSavedDistricts {
     TResult Function(_SaveCep value)? saveCep,
     TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
     TResult Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult Function(_OpenInMap value)? openInMap,
     required TResult orElse(),
   }) {
     if (loadSavedDistricts != null) {
@@ -557,6 +581,7 @@ class _$_LoadSavedCeps implements _LoadSavedCeps {
     required TResult Function(CepEntity cep) saveCep,
     required TResult Function() loadSavedDistricts,
     required TResult Function(String district) loadSavedCeps,
+    required TResult Function(CepEntity ceps) openInMap,
   }) {
     return loadSavedCeps(district);
   }
@@ -568,6 +593,7 @@ class _$_LoadSavedCeps implements _LoadSavedCeps {
     TResult Function(CepEntity cep)? saveCep,
     TResult Function()? loadSavedDistricts,
     TResult Function(String district)? loadSavedCeps,
+    TResult Function(CepEntity ceps)? openInMap,
   }) {
     return loadSavedCeps?.call(district);
   }
@@ -579,6 +605,7 @@ class _$_LoadSavedCeps implements _LoadSavedCeps {
     TResult Function(CepEntity cep)? saveCep,
     TResult Function()? loadSavedDistricts,
     TResult Function(String district)? loadSavedCeps,
+    TResult Function(CepEntity ceps)? openInMap,
     required TResult orElse(),
   }) {
     if (loadSavedCeps != null) {
@@ -594,6 +621,7 @@ class _$_LoadSavedCeps implements _LoadSavedCeps {
     required TResult Function(_SaveCep value) saveCep,
     required TResult Function(_LoadSavedDistricts value) loadSavedDistricts,
     required TResult Function(_LoadSavedCeps value) loadSavedCeps,
+    required TResult Function(_OpenInMap value) openInMap,
   }) {
     return loadSavedCeps(this);
   }
@@ -605,6 +633,7 @@ class _$_LoadSavedCeps implements _LoadSavedCeps {
     TResult Function(_SaveCep value)? saveCep,
     TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
     TResult Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult Function(_OpenInMap value)? openInMap,
   }) {
     return loadSavedCeps?.call(this);
   }
@@ -616,6 +645,7 @@ class _$_LoadSavedCeps implements _LoadSavedCeps {
     TResult Function(_SaveCep value)? saveCep,
     TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
     TResult Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult Function(_OpenInMap value)? openInMap,
     required TResult orElse(),
   }) {
     if (loadSavedCeps != null) {
@@ -635,6 +665,157 @@ abstract class _LoadSavedCeps implements CepEvent {
 }
 
 /// @nodoc
+abstract class _$$_OpenInMapCopyWith<$Res> {
+  factory _$$_OpenInMapCopyWith(
+          _$_OpenInMap value, $Res Function(_$_OpenInMap) then) =
+      __$$_OpenInMapCopyWithImpl<$Res>;
+  $Res call({CepEntity ceps});
+}
+
+/// @nodoc
+class __$$_OpenInMapCopyWithImpl<$Res> extends _$CepEventCopyWithImpl<$Res>
+    implements _$$_OpenInMapCopyWith<$Res> {
+  __$$_OpenInMapCopyWithImpl(
+      _$_OpenInMap _value, $Res Function(_$_OpenInMap) _then)
+      : super(_value, (v) => _then(v as _$_OpenInMap));
+
+  @override
+  _$_OpenInMap get _value => super._value as _$_OpenInMap;
+
+  @override
+  $Res call({
+    Object? ceps = freezed,
+  }) {
+    return _then(_$_OpenInMap(
+      ceps == freezed
+          ? _value.ceps
+          : ceps // ignore: cast_nullable_to_non_nullable
+              as CepEntity,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_OpenInMap implements _OpenInMap {
+  const _$_OpenInMap(this.ceps);
+
+  @override
+  final CepEntity ceps;
+
+  @override
+  String toString() {
+    return 'CepEvent.openInMap(ceps: $ceps)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_OpenInMap &&
+            const DeepCollectionEquality().equals(other.ceps, ceps));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(ceps));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_OpenInMapCopyWith<_$_OpenInMap> get copyWith =>
+      __$$_OpenInMapCopyWithImpl<_$_OpenInMap>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String cep) loadCepInfo,
+    required TResult Function(CepEntity cep) saveCep,
+    required TResult Function() loadSavedDistricts,
+    required TResult Function(String district) loadSavedCeps,
+    required TResult Function(CepEntity ceps) openInMap,
+  }) {
+    return openInMap(ceps);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String cep)? loadCepInfo,
+    TResult Function(CepEntity cep)? saveCep,
+    TResult Function()? loadSavedDistricts,
+    TResult Function(String district)? loadSavedCeps,
+    TResult Function(CepEntity ceps)? openInMap,
+  }) {
+    return openInMap?.call(ceps);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String cep)? loadCepInfo,
+    TResult Function(CepEntity cep)? saveCep,
+    TResult Function()? loadSavedDistricts,
+    TResult Function(String district)? loadSavedCeps,
+    TResult Function(CepEntity ceps)? openInMap,
+    required TResult orElse(),
+  }) {
+    if (openInMap != null) {
+      return openInMap(ceps);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_LoadCepInfo value) loadCepInfo,
+    required TResult Function(_SaveCep value) saveCep,
+    required TResult Function(_LoadSavedDistricts value) loadSavedDistricts,
+    required TResult Function(_LoadSavedCeps value) loadSavedCeps,
+    required TResult Function(_OpenInMap value) openInMap,
+  }) {
+    return openInMap(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_LoadCepInfo value)? loadCepInfo,
+    TResult Function(_SaveCep value)? saveCep,
+    TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
+    TResult Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult Function(_OpenInMap value)? openInMap,
+  }) {
+    return openInMap?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_LoadCepInfo value)? loadCepInfo,
+    TResult Function(_SaveCep value)? saveCep,
+    TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
+    TResult Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult Function(_OpenInMap value)? openInMap,
+    required TResult orElse(),
+  }) {
+    if (openInMap != null) {
+      return openInMap(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OpenInMap implements CepEvent {
+  const factory _OpenInMap(final CepEntity ceps) = _$_OpenInMap;
+
+  CepEntity get ceps;
+  @JsonKey(ignore: true)
+  _$$_OpenInMapCopyWith<_$_OpenInMap> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$CepState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -649,6 +830,8 @@ mixin _$CepState {
     required TResult Function() savingCep,
     required TResult Function() showSuccessSnackbar,
     required TResult Function() showErrorSnackbar,
+    required TResult Function() loadingMap,
+    required TResult Function(LatLng position) mapLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -664,6 +847,8 @@ mixin _$CepState {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -679,6 +864,8 @@ mixin _$CepState {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -697,6 +884,8 @@ mixin _$CepState {
     required TResult Function(_SavingCep value) savingCep,
     required TResult Function(_ShowSuccessSnackbar value) showSuccessSnackbar,
     required TResult Function(_ShowErrorSnackbar value) showErrorSnackbar,
+    required TResult Function(_LoadingMap value) loadingMap,
+    required TResult Function(_MapLoaded value) mapLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -712,6 +901,8 @@ mixin _$CepState {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -727,6 +918,8 @@ mixin _$CepState {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -797,6 +990,8 @@ class _$_Initial implements _Initial {
     required TResult Function() savingCep,
     required TResult Function() showSuccessSnackbar,
     required TResult Function() showErrorSnackbar,
+    required TResult Function() loadingMap,
+    required TResult Function(LatLng position) mapLoaded,
   }) {
     return initial();
   }
@@ -815,6 +1010,8 @@ class _$_Initial implements _Initial {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
   }) {
     return initial?.call();
   }
@@ -833,6 +1030,8 @@ class _$_Initial implements _Initial {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -857,6 +1056,8 @@ class _$_Initial implements _Initial {
     required TResult Function(_SavingCep value) savingCep,
     required TResult Function(_ShowSuccessSnackbar value) showSuccessSnackbar,
     required TResult Function(_ShowErrorSnackbar value) showErrorSnackbar,
+    required TResult Function(_LoadingMap value) loadingMap,
+    required TResult Function(_MapLoaded value) mapLoaded,
   }) {
     return initial(this);
   }
@@ -875,6 +1076,8 @@ class _$_Initial implements _Initial {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
   }) {
     return initial?.call(this);
   }
@@ -893,6 +1096,8 @@ class _$_Initial implements _Initial {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -957,6 +1162,8 @@ class _$_LoadingCep implements _LoadingCep {
     required TResult Function() savingCep,
     required TResult Function() showSuccessSnackbar,
     required TResult Function() showErrorSnackbar,
+    required TResult Function() loadingMap,
+    required TResult Function(LatLng position) mapLoaded,
   }) {
     return loadingCep();
   }
@@ -975,6 +1182,8 @@ class _$_LoadingCep implements _LoadingCep {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
   }) {
     return loadingCep?.call();
   }
@@ -993,6 +1202,8 @@ class _$_LoadingCep implements _LoadingCep {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
     required TResult orElse(),
   }) {
     if (loadingCep != null) {
@@ -1017,6 +1228,8 @@ class _$_LoadingCep implements _LoadingCep {
     required TResult Function(_SavingCep value) savingCep,
     required TResult Function(_ShowSuccessSnackbar value) showSuccessSnackbar,
     required TResult Function(_ShowErrorSnackbar value) showErrorSnackbar,
+    required TResult Function(_LoadingMap value) loadingMap,
+    required TResult Function(_MapLoaded value) mapLoaded,
   }) {
     return loadingCep(this);
   }
@@ -1035,6 +1248,8 @@ class _$_LoadingCep implements _LoadingCep {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
   }) {
     return loadingCep?.call(this);
   }
@@ -1053,6 +1268,8 @@ class _$_LoadingCep implements _LoadingCep {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
     required TResult orElse(),
   }) {
     if (loadingCep != null) {
@@ -1141,6 +1358,8 @@ class _$_LoadedCep implements _LoadedCep {
     required TResult Function() savingCep,
     required TResult Function() showSuccessSnackbar,
     required TResult Function() showErrorSnackbar,
+    required TResult Function() loadingMap,
+    required TResult Function(LatLng position) mapLoaded,
   }) {
     return loadedCep(cep);
   }
@@ -1159,6 +1378,8 @@ class _$_LoadedCep implements _LoadedCep {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
   }) {
     return loadedCep?.call(cep);
   }
@@ -1177,6 +1398,8 @@ class _$_LoadedCep implements _LoadedCep {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
     required TResult orElse(),
   }) {
     if (loadedCep != null) {
@@ -1201,6 +1424,8 @@ class _$_LoadedCep implements _LoadedCep {
     required TResult Function(_SavingCep value) savingCep,
     required TResult Function(_ShowSuccessSnackbar value) showSuccessSnackbar,
     required TResult Function(_ShowErrorSnackbar value) showErrorSnackbar,
+    required TResult Function(_LoadingMap value) loadingMap,
+    required TResult Function(_MapLoaded value) mapLoaded,
   }) {
     return loadedCep(this);
   }
@@ -1219,6 +1444,8 @@ class _$_LoadedCep implements _LoadedCep {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
   }) {
     return loadedCep?.call(this);
   }
@@ -1237,6 +1464,8 @@ class _$_LoadedCep implements _LoadedCep {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
     required TResult orElse(),
   }) {
     if (loadedCep != null) {
@@ -1307,6 +1536,8 @@ class _$_InexistentCepError implements _InexistentCepError {
     required TResult Function() savingCep,
     required TResult Function() showSuccessSnackbar,
     required TResult Function() showErrorSnackbar,
+    required TResult Function() loadingMap,
+    required TResult Function(LatLng position) mapLoaded,
   }) {
     return inexistentCepError();
   }
@@ -1325,6 +1556,8 @@ class _$_InexistentCepError implements _InexistentCepError {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
   }) {
     return inexistentCepError?.call();
   }
@@ -1343,6 +1576,8 @@ class _$_InexistentCepError implements _InexistentCepError {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
     required TResult orElse(),
   }) {
     if (inexistentCepError != null) {
@@ -1367,6 +1602,8 @@ class _$_InexistentCepError implements _InexistentCepError {
     required TResult Function(_SavingCep value) savingCep,
     required TResult Function(_ShowSuccessSnackbar value) showSuccessSnackbar,
     required TResult Function(_ShowErrorSnackbar value) showErrorSnackbar,
+    required TResult Function(_LoadingMap value) loadingMap,
+    required TResult Function(_MapLoaded value) mapLoaded,
   }) {
     return inexistentCepError(this);
   }
@@ -1385,6 +1622,8 @@ class _$_InexistentCepError implements _InexistentCepError {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
   }) {
     return inexistentCepError?.call(this);
   }
@@ -1403,6 +1642,8 @@ class _$_InexistentCepError implements _InexistentCepError {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
     required TResult orElse(),
   }) {
     if (inexistentCepError != null) {
@@ -1469,6 +1710,8 @@ class _$_LoadingSavedDistricts implements _LoadingSavedDistricts {
     required TResult Function() savingCep,
     required TResult Function() showSuccessSnackbar,
     required TResult Function() showErrorSnackbar,
+    required TResult Function() loadingMap,
+    required TResult Function(LatLng position) mapLoaded,
   }) {
     return loadingSavedDistricts();
   }
@@ -1487,6 +1730,8 @@ class _$_LoadingSavedDistricts implements _LoadingSavedDistricts {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
   }) {
     return loadingSavedDistricts?.call();
   }
@@ -1505,6 +1750,8 @@ class _$_LoadingSavedDistricts implements _LoadingSavedDistricts {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
     required TResult orElse(),
   }) {
     if (loadingSavedDistricts != null) {
@@ -1529,6 +1776,8 @@ class _$_LoadingSavedDistricts implements _LoadingSavedDistricts {
     required TResult Function(_SavingCep value) savingCep,
     required TResult Function(_ShowSuccessSnackbar value) showSuccessSnackbar,
     required TResult Function(_ShowErrorSnackbar value) showErrorSnackbar,
+    required TResult Function(_LoadingMap value) loadingMap,
+    required TResult Function(_MapLoaded value) mapLoaded,
   }) {
     return loadingSavedDistricts(this);
   }
@@ -1547,6 +1796,8 @@ class _$_LoadingSavedDistricts implements _LoadingSavedDistricts {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
   }) {
     return loadingSavedDistricts?.call(this);
   }
@@ -1565,6 +1816,8 @@ class _$_LoadingSavedDistricts implements _LoadingSavedDistricts {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
     required TResult orElse(),
   }) {
     if (loadingSavedDistricts != null) {
@@ -1661,6 +1914,8 @@ class _$_LoadedSavedDistricts implements _LoadedSavedDistricts {
     required TResult Function() savingCep,
     required TResult Function() showSuccessSnackbar,
     required TResult Function() showErrorSnackbar,
+    required TResult Function() loadingMap,
+    required TResult Function(LatLng position) mapLoaded,
   }) {
     return loadedSavedDistricts(districts);
   }
@@ -1679,6 +1934,8 @@ class _$_LoadedSavedDistricts implements _LoadedSavedDistricts {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
   }) {
     return loadedSavedDistricts?.call(districts);
   }
@@ -1697,6 +1954,8 @@ class _$_LoadedSavedDistricts implements _LoadedSavedDistricts {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
     required TResult orElse(),
   }) {
     if (loadedSavedDistricts != null) {
@@ -1721,6 +1980,8 @@ class _$_LoadedSavedDistricts implements _LoadedSavedDistricts {
     required TResult Function(_SavingCep value) savingCep,
     required TResult Function(_ShowSuccessSnackbar value) showSuccessSnackbar,
     required TResult Function(_ShowErrorSnackbar value) showErrorSnackbar,
+    required TResult Function(_LoadingMap value) loadingMap,
+    required TResult Function(_MapLoaded value) mapLoaded,
   }) {
     return loadedSavedDistricts(this);
   }
@@ -1739,6 +2000,8 @@ class _$_LoadedSavedDistricts implements _LoadedSavedDistricts {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
   }) {
     return loadedSavedDistricts?.call(this);
   }
@@ -1757,6 +2020,8 @@ class _$_LoadedSavedDistricts implements _LoadedSavedDistricts {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
     required TResult orElse(),
   }) {
     if (loadedSavedDistricts != null) {
@@ -1829,6 +2094,8 @@ class _$_LoadingCepsByDistrict implements _LoadingCepsByDistrict {
     required TResult Function() savingCep,
     required TResult Function() showSuccessSnackbar,
     required TResult Function() showErrorSnackbar,
+    required TResult Function() loadingMap,
+    required TResult Function(LatLng position) mapLoaded,
   }) {
     return loadingCepsByDistrict();
   }
@@ -1847,6 +2114,8 @@ class _$_LoadingCepsByDistrict implements _LoadingCepsByDistrict {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
   }) {
     return loadingCepsByDistrict?.call();
   }
@@ -1865,6 +2134,8 @@ class _$_LoadingCepsByDistrict implements _LoadingCepsByDistrict {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
     required TResult orElse(),
   }) {
     if (loadingCepsByDistrict != null) {
@@ -1889,6 +2160,8 @@ class _$_LoadingCepsByDistrict implements _LoadingCepsByDistrict {
     required TResult Function(_SavingCep value) savingCep,
     required TResult Function(_ShowSuccessSnackbar value) showSuccessSnackbar,
     required TResult Function(_ShowErrorSnackbar value) showErrorSnackbar,
+    required TResult Function(_LoadingMap value) loadingMap,
+    required TResult Function(_MapLoaded value) mapLoaded,
   }) {
     return loadingCepsByDistrict(this);
   }
@@ -1907,6 +2180,8 @@ class _$_LoadingCepsByDistrict implements _LoadingCepsByDistrict {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
   }) {
     return loadingCepsByDistrict?.call(this);
   }
@@ -1925,6 +2200,8 @@ class _$_LoadingCepsByDistrict implements _LoadingCepsByDistrict {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
     required TResult orElse(),
   }) {
     if (loadingCepsByDistrict != null) {
@@ -2019,6 +2296,8 @@ class _$_LoadedCepsByDistrict implements _LoadedCepsByDistrict {
     required TResult Function() savingCep,
     required TResult Function() showSuccessSnackbar,
     required TResult Function() showErrorSnackbar,
+    required TResult Function() loadingMap,
+    required TResult Function(LatLng position) mapLoaded,
   }) {
     return loadedCepsByDistrict(ceps);
   }
@@ -2037,6 +2316,8 @@ class _$_LoadedCepsByDistrict implements _LoadedCepsByDistrict {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
   }) {
     return loadedCepsByDistrict?.call(ceps);
   }
@@ -2055,6 +2336,8 @@ class _$_LoadedCepsByDistrict implements _LoadedCepsByDistrict {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
     required TResult orElse(),
   }) {
     if (loadedCepsByDistrict != null) {
@@ -2079,6 +2362,8 @@ class _$_LoadedCepsByDistrict implements _LoadedCepsByDistrict {
     required TResult Function(_SavingCep value) savingCep,
     required TResult Function(_ShowSuccessSnackbar value) showSuccessSnackbar,
     required TResult Function(_ShowErrorSnackbar value) showErrorSnackbar,
+    required TResult Function(_LoadingMap value) loadingMap,
+    required TResult Function(_MapLoaded value) mapLoaded,
   }) {
     return loadedCepsByDistrict(this);
   }
@@ -2097,6 +2382,8 @@ class _$_LoadedCepsByDistrict implements _LoadedCepsByDistrict {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
   }) {
     return loadedCepsByDistrict?.call(this);
   }
@@ -2115,6 +2402,8 @@ class _$_LoadedCepsByDistrict implements _LoadedCepsByDistrict {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
     required TResult orElse(),
   }) {
     if (loadedCepsByDistrict != null) {
@@ -2185,6 +2474,8 @@ class _$_SavingCep implements _SavingCep {
     required TResult Function() savingCep,
     required TResult Function() showSuccessSnackbar,
     required TResult Function() showErrorSnackbar,
+    required TResult Function() loadingMap,
+    required TResult Function(LatLng position) mapLoaded,
   }) {
     return savingCep();
   }
@@ -2203,6 +2494,8 @@ class _$_SavingCep implements _SavingCep {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
   }) {
     return savingCep?.call();
   }
@@ -2221,6 +2514,8 @@ class _$_SavingCep implements _SavingCep {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
     required TResult orElse(),
   }) {
     if (savingCep != null) {
@@ -2245,6 +2540,8 @@ class _$_SavingCep implements _SavingCep {
     required TResult Function(_SavingCep value) savingCep,
     required TResult Function(_ShowSuccessSnackbar value) showSuccessSnackbar,
     required TResult Function(_ShowErrorSnackbar value) showErrorSnackbar,
+    required TResult Function(_LoadingMap value) loadingMap,
+    required TResult Function(_MapLoaded value) mapLoaded,
   }) {
     return savingCep(this);
   }
@@ -2263,6 +2560,8 @@ class _$_SavingCep implements _SavingCep {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
   }) {
     return savingCep?.call(this);
   }
@@ -2281,6 +2580,8 @@ class _$_SavingCep implements _SavingCep {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
     required TResult orElse(),
   }) {
     if (savingCep != null) {
@@ -2346,6 +2647,8 @@ class _$_ShowSuccessSnackbar implements _ShowSuccessSnackbar {
     required TResult Function() savingCep,
     required TResult Function() showSuccessSnackbar,
     required TResult Function() showErrorSnackbar,
+    required TResult Function() loadingMap,
+    required TResult Function(LatLng position) mapLoaded,
   }) {
     return showSuccessSnackbar();
   }
@@ -2364,6 +2667,8 @@ class _$_ShowSuccessSnackbar implements _ShowSuccessSnackbar {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
   }) {
     return showSuccessSnackbar?.call();
   }
@@ -2382,6 +2687,8 @@ class _$_ShowSuccessSnackbar implements _ShowSuccessSnackbar {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
     required TResult orElse(),
   }) {
     if (showSuccessSnackbar != null) {
@@ -2406,6 +2713,8 @@ class _$_ShowSuccessSnackbar implements _ShowSuccessSnackbar {
     required TResult Function(_SavingCep value) savingCep,
     required TResult Function(_ShowSuccessSnackbar value) showSuccessSnackbar,
     required TResult Function(_ShowErrorSnackbar value) showErrorSnackbar,
+    required TResult Function(_LoadingMap value) loadingMap,
+    required TResult Function(_MapLoaded value) mapLoaded,
   }) {
     return showSuccessSnackbar(this);
   }
@@ -2424,6 +2733,8 @@ class _$_ShowSuccessSnackbar implements _ShowSuccessSnackbar {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
   }) {
     return showSuccessSnackbar?.call(this);
   }
@@ -2442,6 +2753,8 @@ class _$_ShowSuccessSnackbar implements _ShowSuccessSnackbar {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
     required TResult orElse(),
   }) {
     if (showSuccessSnackbar != null) {
@@ -2507,6 +2820,8 @@ class _$_ShowErrorSnackbar implements _ShowErrorSnackbar {
     required TResult Function() savingCep,
     required TResult Function() showSuccessSnackbar,
     required TResult Function() showErrorSnackbar,
+    required TResult Function() loadingMap,
+    required TResult Function(LatLng position) mapLoaded,
   }) {
     return showErrorSnackbar();
   }
@@ -2525,6 +2840,8 @@ class _$_ShowErrorSnackbar implements _ShowErrorSnackbar {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
   }) {
     return showErrorSnackbar?.call();
   }
@@ -2543,6 +2860,8 @@ class _$_ShowErrorSnackbar implements _ShowErrorSnackbar {
     TResult Function()? savingCep,
     TResult Function()? showSuccessSnackbar,
     TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
     required TResult orElse(),
   }) {
     if (showErrorSnackbar != null) {
@@ -2567,6 +2886,8 @@ class _$_ShowErrorSnackbar implements _ShowErrorSnackbar {
     required TResult Function(_SavingCep value) savingCep,
     required TResult Function(_ShowSuccessSnackbar value) showSuccessSnackbar,
     required TResult Function(_ShowErrorSnackbar value) showErrorSnackbar,
+    required TResult Function(_LoadingMap value) loadingMap,
+    required TResult Function(_MapLoaded value) mapLoaded,
   }) {
     return showErrorSnackbar(this);
   }
@@ -2585,6 +2906,8 @@ class _$_ShowErrorSnackbar implements _ShowErrorSnackbar {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
   }) {
     return showErrorSnackbar?.call(this);
   }
@@ -2603,6 +2926,8 @@ class _$_ShowErrorSnackbar implements _ShowErrorSnackbar {
     TResult Function(_SavingCep value)? savingCep,
     TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
     TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
     required TResult orElse(),
   }) {
     if (showErrorSnackbar != null) {
@@ -2614,4 +2939,377 @@ class _$_ShowErrorSnackbar implements _ShowErrorSnackbar {
 
 abstract class _ShowErrorSnackbar implements CepState {
   const factory _ShowErrorSnackbar() = _$_ShowErrorSnackbar;
+}
+
+/// @nodoc
+abstract class _$$_LoadingMapCopyWith<$Res> {
+  factory _$$_LoadingMapCopyWith(
+          _$_LoadingMap value, $Res Function(_$_LoadingMap) then) =
+      __$$_LoadingMapCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_LoadingMapCopyWithImpl<$Res> extends _$CepStateCopyWithImpl<$Res>
+    implements _$$_LoadingMapCopyWith<$Res> {
+  __$$_LoadingMapCopyWithImpl(
+      _$_LoadingMap _value, $Res Function(_$_LoadingMap) _then)
+      : super(_value, (v) => _then(v as _$_LoadingMap));
+
+  @override
+  _$_LoadingMap get _value => super._value as _$_LoadingMap;
+}
+
+/// @nodoc
+
+class _$_LoadingMap implements _LoadingMap {
+  const _$_LoadingMap();
+
+  @override
+  String toString() {
+    return 'CepState.loadingMap()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_LoadingMap);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingCep,
+    required TResult Function(CepEntity cep) loadedCep,
+    required TResult Function() inexistentCepError,
+    required TResult Function() loadingSavedDistricts,
+    required TResult Function(List<String> districts) loadedSavedDistricts,
+    required TResult Function() loadingCepsByDistrict,
+    required TResult Function(List<CepEntity> ceps) loadedCepsByDistrict,
+    required TResult Function() savingCep,
+    required TResult Function() showSuccessSnackbar,
+    required TResult Function() showErrorSnackbar,
+    required TResult Function() loadingMap,
+    required TResult Function(LatLng position) mapLoaded,
+  }) {
+    return loadingMap();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingCep,
+    TResult Function(CepEntity cep)? loadedCep,
+    TResult Function()? inexistentCepError,
+    TResult Function()? loadingSavedDistricts,
+    TResult Function(List<String> districts)? loadedSavedDistricts,
+    TResult Function()? loadingCepsByDistrict,
+    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult Function()? savingCep,
+    TResult Function()? showSuccessSnackbar,
+    TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
+  }) {
+    return loadingMap?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingCep,
+    TResult Function(CepEntity cep)? loadedCep,
+    TResult Function()? inexistentCepError,
+    TResult Function()? loadingSavedDistricts,
+    TResult Function(List<String> districts)? loadedSavedDistricts,
+    TResult Function()? loadingCepsByDistrict,
+    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult Function()? savingCep,
+    TResult Function()? showSuccessSnackbar,
+    TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
+    required TResult orElse(),
+  }) {
+    if (loadingMap != null) {
+      return loadingMap();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadingCep value) loadingCep,
+    required TResult Function(_LoadedCep value) loadedCep,
+    required TResult Function(_InexistentCepError value) inexistentCepError,
+    required TResult Function(_LoadingSavedDistricts value)
+        loadingSavedDistricts,
+    required TResult Function(_LoadedSavedDistricts value) loadedSavedDistricts,
+    required TResult Function(_LoadingCepsByDistrict value)
+        loadingCepsByDistrict,
+    required TResult Function(_LoadedCepsByDistrict value) loadedCepsByDistrict,
+    required TResult Function(_SavingCep value) savingCep,
+    required TResult Function(_ShowSuccessSnackbar value) showSuccessSnackbar,
+    required TResult Function(_ShowErrorSnackbar value) showErrorSnackbar,
+    required TResult Function(_LoadingMap value) loadingMap,
+    required TResult Function(_MapLoaded value) mapLoaded,
+  }) {
+    return loadingMap(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingCep value)? loadingCep,
+    TResult Function(_LoadedCep value)? loadedCep,
+    TResult Function(_InexistentCepError value)? inexistentCepError,
+    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult Function(_SavingCep value)? savingCep,
+    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
+  }) {
+    return loadingMap?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingCep value)? loadingCep,
+    TResult Function(_LoadedCep value)? loadedCep,
+    TResult Function(_InexistentCepError value)? inexistentCepError,
+    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult Function(_SavingCep value)? savingCep,
+    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
+    required TResult orElse(),
+  }) {
+    if (loadingMap != null) {
+      return loadingMap(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadingMap implements CepState {
+  const factory _LoadingMap() = _$_LoadingMap;
+}
+
+/// @nodoc
+abstract class _$$_MapLoadedCopyWith<$Res> {
+  factory _$$_MapLoadedCopyWith(
+          _$_MapLoaded value, $Res Function(_$_MapLoaded) then) =
+      __$$_MapLoadedCopyWithImpl<$Res>;
+  $Res call({LatLng position});
+}
+
+/// @nodoc
+class __$$_MapLoadedCopyWithImpl<$Res> extends _$CepStateCopyWithImpl<$Res>
+    implements _$$_MapLoadedCopyWith<$Res> {
+  __$$_MapLoadedCopyWithImpl(
+      _$_MapLoaded _value, $Res Function(_$_MapLoaded) _then)
+      : super(_value, (v) => _then(v as _$_MapLoaded));
+
+  @override
+  _$_MapLoaded get _value => super._value as _$_MapLoaded;
+
+  @override
+  $Res call({
+    Object? position = freezed,
+  }) {
+    return _then(_$_MapLoaded(
+      position == freezed
+          ? _value.position
+          : position // ignore: cast_nullable_to_non_nullable
+              as LatLng,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_MapLoaded implements _MapLoaded {
+  const _$_MapLoaded(this.position);
+
+  @override
+  final LatLng position;
+
+  @override
+  String toString() {
+    return 'CepState.mapLoaded(position: $position)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_MapLoaded &&
+            const DeepCollectionEquality().equals(other.position, position));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(position));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_MapLoadedCopyWith<_$_MapLoaded> get copyWith =>
+      __$$_MapLoadedCopyWithImpl<_$_MapLoaded>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingCep,
+    required TResult Function(CepEntity cep) loadedCep,
+    required TResult Function() inexistentCepError,
+    required TResult Function() loadingSavedDistricts,
+    required TResult Function(List<String> districts) loadedSavedDistricts,
+    required TResult Function() loadingCepsByDistrict,
+    required TResult Function(List<CepEntity> ceps) loadedCepsByDistrict,
+    required TResult Function() savingCep,
+    required TResult Function() showSuccessSnackbar,
+    required TResult Function() showErrorSnackbar,
+    required TResult Function() loadingMap,
+    required TResult Function(LatLng position) mapLoaded,
+  }) {
+    return mapLoaded(position);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingCep,
+    TResult Function(CepEntity cep)? loadedCep,
+    TResult Function()? inexistentCepError,
+    TResult Function()? loadingSavedDistricts,
+    TResult Function(List<String> districts)? loadedSavedDistricts,
+    TResult Function()? loadingCepsByDistrict,
+    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult Function()? savingCep,
+    TResult Function()? showSuccessSnackbar,
+    TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
+  }) {
+    return mapLoaded?.call(position);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingCep,
+    TResult Function(CepEntity cep)? loadedCep,
+    TResult Function()? inexistentCepError,
+    TResult Function()? loadingSavedDistricts,
+    TResult Function(List<String> districts)? loadedSavedDistricts,
+    TResult Function()? loadingCepsByDistrict,
+    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult Function()? savingCep,
+    TResult Function()? showSuccessSnackbar,
+    TResult Function()? showErrorSnackbar,
+    TResult Function()? loadingMap,
+    TResult Function(LatLng position)? mapLoaded,
+    required TResult orElse(),
+  }) {
+    if (mapLoaded != null) {
+      return mapLoaded(position);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadingCep value) loadingCep,
+    required TResult Function(_LoadedCep value) loadedCep,
+    required TResult Function(_InexistentCepError value) inexistentCepError,
+    required TResult Function(_LoadingSavedDistricts value)
+        loadingSavedDistricts,
+    required TResult Function(_LoadedSavedDistricts value) loadedSavedDistricts,
+    required TResult Function(_LoadingCepsByDistrict value)
+        loadingCepsByDistrict,
+    required TResult Function(_LoadedCepsByDistrict value) loadedCepsByDistrict,
+    required TResult Function(_SavingCep value) savingCep,
+    required TResult Function(_ShowSuccessSnackbar value) showSuccessSnackbar,
+    required TResult Function(_ShowErrorSnackbar value) showErrorSnackbar,
+    required TResult Function(_LoadingMap value) loadingMap,
+    required TResult Function(_MapLoaded value) mapLoaded,
+  }) {
+    return mapLoaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingCep value)? loadingCep,
+    TResult Function(_LoadedCep value)? loadedCep,
+    TResult Function(_InexistentCepError value)? inexistentCepError,
+    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult Function(_SavingCep value)? savingCep,
+    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
+  }) {
+    return mapLoaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingCep value)? loadingCep,
+    TResult Function(_LoadedCep value)? loadedCep,
+    TResult Function(_InexistentCepError value)? inexistentCepError,
+    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult Function(_SavingCep value)? savingCep,
+    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult Function(_LoadingMap value)? loadingMap,
+    TResult Function(_MapLoaded value)? mapLoaded,
+    required TResult orElse(),
+  }) {
+    if (mapLoaded != null) {
+      return mapLoaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _MapLoaded implements CepState {
+  const factory _MapLoaded(final LatLng position) = _$_MapLoaded;
+
+  LatLng get position;
+  @JsonKey(ignore: true)
+  _$$_MapLoadedCopyWith<_$_MapLoaded> get copyWith =>
+      throw _privateConstructorUsedError;
 }

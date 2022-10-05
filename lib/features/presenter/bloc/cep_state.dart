@@ -15,4 +15,7 @@ class CepState with _$CepState {
   const factory CepState.savingCep() = _SavingCep;
   const factory CepState.showSuccessSnackbar() = _ShowSuccessSnackbar;
   const factory CepState.showErrorSnackbar() = _ShowErrorSnackbar;
+  const factory CepState.loadingMap() = _LoadingMap;
+  const factory CepState.mapLoaded(LatLng position) = _MapLoaded;
+  
 }

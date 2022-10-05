@@ -4,6 +4,8 @@
         android:label="busca_cep"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <meta-data android:name="com.google.android.geo.API_KEY"
+                   android:value = "AIzaSyCwdkK6h-podFcdFq92a-Sw6UpB1LZzkPI"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

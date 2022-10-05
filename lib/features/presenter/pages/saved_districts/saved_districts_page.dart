@@ -14,6 +14,11 @@ class SavedDistrictsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<CepBloc, CepState>(
       bloc: bloc,
+      buildWhen: (previous, current) => current.maybeWhen(
+        loadedSavedDistricts: (districts) => true,
+        loadingSavedDistricts: () => true,
+        orElse: () => false,
+      ),
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
@@ -26,6 +31,10 @@ class SavedDistrictsPage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return DistrictCard(
                     district: districts[index],
+                    onTap: () {
+                      bloc.add(CepEvent.loadSavedCeps(districts[index]));
+                      Navigator.of(context).pushNamed('/districts/ceps');
+                    },
                   );
                 },
               );

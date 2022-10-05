@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:busca_cep/core/errors/server_exceptions.dart';
 import 'package:busca_cep/features/domain/entities/cep_entity.dart';
 import 'package:busca_cep/features/domain/usecases/get_saved_ceps_usecase.dart';
@@ -8,10 +6,14 @@ import 'package:busca_cep/features/domain/usecases/search_cep_usecase.dart';
 import 'package:busca_cep/injector/injector.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:geocoding/geocoding.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 part 'cep_bloc.freezed.dart';
 part 'cep_event.dart';
 part 'cep_state.dart';
+
+const cepWithoutDistrict = 'Ceps sem localidade';
 
 class CepBloc extends Bloc<CepEvent, CepState> {
   final SearchCepUsecase searchCepUsecase = serviceLocator();
@@ -27,6 +29,7 @@ class CepBloc extends Bloc<CepEvent, CepState> {
       ),
     );
     on<_LoadSavedCeps>((event, emit) => _onLoadSavedCeps(event, emit));
+    on<_OpenInMap>((event, emit) => _onOpenInMapEvent(event, emit));
   }
 
   void _onLoadCepInfoEvent(
@@ -69,9 +72,13 @@ class CepBloc extends Bloc<CepEvent, CepState> {
     result.fold(
       (error) => emit(const _ShowErrorSnackbar()),
       (ceps) {
-        log(ceps.toString());
         ceps.map((e) {
-          districts.add(e.district);
+          if (e.district.isEmpty && !districts.contains(cepWithoutDistrict)) {
+            districts.add(cepWithoutDistrict);
+          }
+          if (!districts.contains(e.district) && e.district.isNotEmpty) {
+            districts.add(e.district);
+          }
         }).toList();
       },
     );
@@ -93,9 +100,25 @@ class CepBloc extends Bloc<CepEvent, CepState> {
           if (cep.district == event.district) {
             cepsByDistrict.add(cep);
           }
+          if (event.district == cepWithoutDistrict && cep.district.isEmpty) {
+            cepsByDistrict.add(cep);
+          }
         },
-      ),
+      ).toList(),
     );
     emit(_LoadedCepsByDistrict(cepsByDistrict));
+  }
+
+  void _onOpenInMapEvent(_OpenInMap event, Emitter<CepState> emit) async {
+    emit(const _LoadingMap());
+    final location = await locationFromAddress(
+      event.ceps.cep,
+      localeIdentifier: 'pt_BR',
+    );
+    final position = LatLng(
+      location.first.latitude,
+      location.first.longitude,
+    );
+    emit(_MapLoaded(position));
   }
 }

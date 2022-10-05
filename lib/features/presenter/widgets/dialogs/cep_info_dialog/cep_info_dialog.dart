@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 
 import 'components/custom_content_row.dart';
 
-Future<T?> showSearchResultDialog<T>({
+Future<T?> showCepInfoDialog<T>({
   required BuildContext context,
   required CepEntity cep,
-  VoidCallback? onSavePressed,
-  VoidCallback? onDiscardPressed,
+  Widget? primaryButton,
+  Widget? secondaryButton,
 }) {
   return showDialog<T>(
     context: context,
@@ -46,19 +46,8 @@ Future<T?> showSearchResultDialog<T>({
           ],
         ),
         actions: [
-          TextButton(
-            onPressed: onDiscardPressed,
-            child: Text(
-              'Descartar',
-              style: TextStyle(
-                color: Theme.of(context).colorScheme.primary,
-              ),
-            ),
-          ),
-          ElevatedButton(
-            onPressed: onSavePressed,
-            child: const Text('Salvar Cep'),
-          ),
+          if (primaryButton != null) primaryButton,
+          if (secondaryButton != null) secondaryButton,
         ],
         actionsAlignment: MainAxisAlignment.spaceEvenly,
       );

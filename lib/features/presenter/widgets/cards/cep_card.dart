@@ -1,10 +1,11 @@
+import 'package:busca_cep/features/domain/entities/cep_entity.dart';
 import 'package:flutter/material.dart';
 
-class DistrictCard extends StatelessWidget {
-  final String district;
+class CepCard extends StatelessWidget {
+  final CepEntity cep;
   final VoidCallback? onTap;
-  const DistrictCard({
-    required this.district,
+  const CepCard({
+    required this.cep,
     this.onTap,
     super.key,
   });
@@ -14,7 +15,8 @@ class DistrictCard extends StatelessWidget {
     return Card(
       child: ListTile(
         onTap: onTap,
-        title: Text(district),
+        title: Text(cep.cep),
+        subtitle: Text(cep.city),
         trailing: Icon(
           Icons.pin_drop,
           color: Theme.of(context).colorScheme.primary,
