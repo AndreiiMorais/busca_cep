@@ -80,10 +80,10 @@ class CepBloc extends Bloc<CepEvent, CepState> {
             districts.add(e.district);
           }
         }).toList();
+        districts.sort((a, b) => a.length.compareTo(b.length));
+        emit(_LoadedSavedDistricts(districts));
       },
     );
-    emit(_LoadedSavedDistricts(districts));
-    districts.sort((a, b) => a.length.compareTo(b.length));
   }
 
   void _onLoadSavedCeps(
@@ -95,18 +95,20 @@ class CepBloc extends Bloc<CepEvent, CepState> {
     final cepsByDistrict = <CepEntity>[];
     result.fold(
       (error) => emit(const _ShowErrorSnackbar()),
-      (ceps) => ceps.map(
-        (cep) {
-          if (cep.district == event.district) {
-            cepsByDistrict.add(cep);
-          }
-          if (event.district == cepWithoutDistrict && cep.district.isEmpty) {
-            cepsByDistrict.add(cep);
-          }
-        },
-      ).toList(),
+      (ceps) {
+        ceps.map(
+          (cep) {
+            if (cep.district == event.district) {
+              cepsByDistrict.add(cep);
+            }
+            if (event.district == cepWithoutDistrict && cep.district.isEmpty) {
+              cepsByDistrict.add(cep);
+            }
+          },
+        ).toList();
+        emit(_LoadedCepsByDistrict(cepsByDistrict));
+      },
     );
-    emit(_LoadedCepsByDistrict(cepsByDistrict));
   }
 
   void _onOpenInMapEvent(_OpenInMap event, Emitter<CepState> emit) async {

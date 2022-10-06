@@ -59,7 +59,6 @@ class _CustomMapState extends State<CustomMap> {
             onMapCreated: (controller) {
               setState(() {
                 mapController = controller;
-                // mapController?.moveCamera(CameraUpdate.newLatLng(position));
               });
             },
           ),

@@ -8,7 +8,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-import '../../../../utils/mock_constants.dart';
+import '../../../../utils/mocks.dart';
 
 class MockHttpClient extends Mock implements HttpClient {}
 
@@ -27,7 +27,7 @@ void main() {
       //Arrange
       when(() => client.get(any())).thenAnswer(
         (_) async => HttpResponse(
-          data: MockConstants.cepApiResponse,
+          data: Mocks.cepApiResponse,
           statusCode: 200,
         ),
       );
@@ -47,7 +47,7 @@ void main() {
       //Arrange
       when(() => client.get(any())).thenAnswer(
         (_) async => HttpResponse(
-          data: MockConstants.cepApiResponse,
+          data: Mocks.cepApiResponse,
           statusCode: 200,
         ),
       );
@@ -68,8 +68,8 @@ void main() {
     () async {
       //Arrange
       when(() => client.get(any())).thenAnswer(
-        (_) async => HttpResponse(
-            data: MockConstants.cepBadRequestResponse, statusCode: 200),
+        (_) async =>
+            HttpResponse(data: Mocks.cepBadRequestResponse, statusCode: 200),
       );
 
       //Act
