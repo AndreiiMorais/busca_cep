@@ -129,15 +129,16 @@ class _SearchCepHomepageState extends State<SearchCepHomepage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/address-search.jpg'),
+              Flexible(
+                child: Image.asset('assets/address-search.jpg'),
+              ),
               SearchCepTextfield(
                 error: error,
                 controller: _controller,
                 onSubmitted: (cep) => _bloc.add(CepEvent.loadCepInfo(cep)),
               ),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [

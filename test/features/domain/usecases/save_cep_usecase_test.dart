@@ -44,7 +44,7 @@ void main() {
     () async {
       //Arrange
       when(() => repository.saveCep(any())).thenAnswer(
-        (_) async => Left(DuplicatedKeyFailure()),
+        (_) async => const Left(DuplicatedKeyFailure()),
       );
 
       //Act

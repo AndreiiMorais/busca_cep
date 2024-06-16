@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class CustomMap extends StatefulWidget {
-  const CustomMap({Key? key}) : super(key: key);
+  const CustomMap({super.key});
 
   @override
   State<CustomMap> createState() => _CustomMapState();

@@ -4,10 +4,10 @@ class CustomContentRow extends StatelessWidget {
   final String leadingText;
   final String trailingText;
   const CustomContentRow({
-    Key? key,
+    super.key,
     required this.leadingText,
     required this.trailingText,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

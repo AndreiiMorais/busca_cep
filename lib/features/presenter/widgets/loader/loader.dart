@@ -53,7 +53,7 @@ class Loader {
       },
     );
 
-    Overlay.of(context)?.insert(overlay);
+    Overlay.of(context).insert(overlay);
     return _LoaderController(() {
       overlay.remove();
       return true;

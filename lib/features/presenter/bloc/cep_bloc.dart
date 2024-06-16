@@ -114,8 +114,7 @@ class CepBloc extends Bloc<CepEvent, CepState> {
   void _onOpenInMapEvent(_OpenInMap event, Emitter<CepState> emit) async {
     emit(const _LoadingMap());
     final location = await locationFromAddress(
-      event.ceps.cep,
-      localeIdentifier: 'pt_BR',
+      event.ceps.cep
     );
     final position = LatLng(
       location.first.latitude,

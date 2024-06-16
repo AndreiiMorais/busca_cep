@@ -15,14 +15,12 @@ import '../../../../utils/mocks.dart';
 class MockCepEntity extends Mock implements CepEntity {}
 
 void main() {
-  late CepBloc bloc;
   late StreamController<CepState> state;
   final CepEntity cep = MockCepEntity();
 
   setUp(() {
     state = StreamController<CepState>();
     Mocks.initializeBlocForTest(state);
-    bloc = serviceLocator();
     when(() => cep.district).thenReturn('Centro');
     when(() => cep.cep).thenReturn('00000000');
     when(() => cep.city).thenReturn('Agudo');

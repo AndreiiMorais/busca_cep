@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SavedCepsByDistrict extends StatelessWidget {
-  SavedCepsByDistrict({Key? key}) : super(key: key);
+  SavedCepsByDistrict({super.key});
   final CepBloc bloc = serviceLocator();
 
   @override

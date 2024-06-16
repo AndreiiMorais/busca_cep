@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'cep_bloc.dart';
 
@@ -12,7 +12,7 @@ part of 'cep_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$CepEvent {
@@ -27,11 +27,11 @@ mixin _$CepEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String cep)? loadCepInfo,
-    TResult Function(CepEntity cep)? saveCep,
-    TResult Function()? loadSavedDistricts,
-    TResult Function(String district)? loadSavedCeps,
-    TResult Function(CepEntity ceps)? openInMap,
+    TResult? Function(String cep)? loadCepInfo,
+    TResult? Function(CepEntity cep)? saveCep,
+    TResult? Function()? loadSavedDistricts,
+    TResult? Function(String district)? loadSavedCeps,
+    TResult? Function(CepEntity ceps)? openInMap,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,11 +55,11 @@ mixin _$CepEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_LoadCepInfo value)? loadCepInfo,
-    TResult Function(_SaveCep value)? saveCep,
-    TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
-    TResult Function(_LoadSavedCeps value)? loadSavedCeps,
-    TResult Function(_OpenInMap value)? openInMap,
+    TResult? Function(_LoadCepInfo value)? loadCepInfo,
+    TResult? Function(_SaveCep value)? saveCep,
+    TResult? Function(_LoadSavedDistricts value)? loadSavedDistricts,
+    TResult? Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult? Function(_OpenInMap value)? openInMap,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -77,42 +77,44 @@ mixin _$CepEvent {
 /// @nodoc
 abstract class $CepEventCopyWith<$Res> {
   factory $CepEventCopyWith(CepEvent value, $Res Function(CepEvent) then) =
-      _$CepEventCopyWithImpl<$Res>;
+      _$CepEventCopyWithImpl<$Res, CepEvent>;
 }
 
 /// @nodoc
-class _$CepEventCopyWithImpl<$Res> implements $CepEventCopyWith<$Res> {
+class _$CepEventCopyWithImpl<$Res, $Val extends CepEvent>
+    implements $CepEventCopyWith<$Res> {
   _$CepEventCopyWithImpl(this._value, this._then);
 
-  final CepEvent _value;
   // ignore: unused_field
-  final $Res Function(CepEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$$_LoadCepInfoCopyWith<$Res> {
-  factory _$$_LoadCepInfoCopyWith(
-          _$_LoadCepInfo value, $Res Function(_$_LoadCepInfo) then) =
-      __$$_LoadCepInfoCopyWithImpl<$Res>;
+abstract class _$$LoadCepInfoImplCopyWith<$Res> {
+  factory _$$LoadCepInfoImplCopyWith(
+          _$LoadCepInfoImpl value, $Res Function(_$LoadCepInfoImpl) then) =
+      __$$LoadCepInfoImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String cep});
 }
 
 /// @nodoc
-class __$$_LoadCepInfoCopyWithImpl<$Res> extends _$CepEventCopyWithImpl<$Res>
-    implements _$$_LoadCepInfoCopyWith<$Res> {
-  __$$_LoadCepInfoCopyWithImpl(
-      _$_LoadCepInfo _value, $Res Function(_$_LoadCepInfo) _then)
-      : super(_value, (v) => _then(v as _$_LoadCepInfo));
+class __$$LoadCepInfoImplCopyWithImpl<$Res>
+    extends _$CepEventCopyWithImpl<$Res, _$LoadCepInfoImpl>
+    implements _$$LoadCepInfoImplCopyWith<$Res> {
+  __$$LoadCepInfoImplCopyWithImpl(
+      _$LoadCepInfoImpl _value, $Res Function(_$LoadCepInfoImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_LoadCepInfo get _value => super._value as _$_LoadCepInfo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? cep = freezed,
+    Object? cep = null,
   }) {
-    return _then(_$_LoadCepInfo(
-      cep == freezed
+    return _then(_$LoadCepInfoImpl(
+      null == cep
           ? _value.cep
           : cep // ignore: cast_nullable_to_non_nullable
               as String,
@@ -122,8 +124,8 @@ class __$$_LoadCepInfoCopyWithImpl<$Res> extends _$CepEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoadCepInfo implements _LoadCepInfo {
-  const _$_LoadCepInfo(this.cep);
+class _$LoadCepInfoImpl implements _LoadCepInfo {
+  const _$LoadCepInfoImpl(this.cep);
 
   @override
   final String cep;
@@ -134,21 +136,21 @@ class _$_LoadCepInfo implements _LoadCepInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadCepInfo &&
-            const DeepCollectionEquality().equals(other.cep, cep));
+            other is _$LoadCepInfoImpl &&
+            (identical(other.cep, cep) || other.cep == cep));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(cep));
+  int get hashCode => Object.hash(runtimeType, cep);
 
   @JsonKey(ignore: true)
   @override
-  _$$_LoadCepInfoCopyWith<_$_LoadCepInfo> get copyWith =>
-      __$$_LoadCepInfoCopyWithImpl<_$_LoadCepInfo>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$LoadCepInfoImplCopyWith<_$LoadCepInfoImpl> get copyWith =>
+      __$$LoadCepInfoImplCopyWithImpl<_$LoadCepInfoImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -165,11 +167,11 @@ class _$_LoadCepInfo implements _LoadCepInfo {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String cep)? loadCepInfo,
-    TResult Function(CepEntity cep)? saveCep,
-    TResult Function()? loadSavedDistricts,
-    TResult Function(String district)? loadSavedCeps,
-    TResult Function(CepEntity ceps)? openInMap,
+    TResult? Function(String cep)? loadCepInfo,
+    TResult? Function(CepEntity cep)? saveCep,
+    TResult? Function()? loadSavedDistricts,
+    TResult? Function(String district)? loadSavedCeps,
+    TResult? Function(CepEntity ceps)? openInMap,
   }) {
     return loadCepInfo?.call(cep);
   }
@@ -205,11 +207,11 @@ class _$_LoadCepInfo implements _LoadCepInfo {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_LoadCepInfo value)? loadCepInfo,
-    TResult Function(_SaveCep value)? saveCep,
-    TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
-    TResult Function(_LoadSavedCeps value)? loadSavedCeps,
-    TResult Function(_OpenInMap value)? openInMap,
+    TResult? Function(_LoadCepInfo value)? loadCepInfo,
+    TResult? Function(_SaveCep value)? saveCep,
+    TResult? Function(_LoadSavedDistricts value)? loadSavedDistricts,
+    TResult? Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult? Function(_OpenInMap value)? openInMap,
   }) {
     return loadCepInfo?.call(this);
   }
@@ -232,37 +234,38 @@ class _$_LoadCepInfo implements _LoadCepInfo {
 }
 
 abstract class _LoadCepInfo implements CepEvent {
-  const factory _LoadCepInfo(final String cep) = _$_LoadCepInfo;
+  const factory _LoadCepInfo(final String cep) = _$LoadCepInfoImpl;
 
   String get cep;
   @JsonKey(ignore: true)
-  _$$_LoadCepInfoCopyWith<_$_LoadCepInfo> get copyWith =>
+  _$$LoadCepInfoImplCopyWith<_$LoadCepInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SaveCepCopyWith<$Res> {
-  factory _$$_SaveCepCopyWith(
-          _$_SaveCep value, $Res Function(_$_SaveCep) then) =
-      __$$_SaveCepCopyWithImpl<$Res>;
+abstract class _$$SaveCepImplCopyWith<$Res> {
+  factory _$$SaveCepImplCopyWith(
+          _$SaveCepImpl value, $Res Function(_$SaveCepImpl) then) =
+      __$$SaveCepImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({CepEntity cep});
 }
 
 /// @nodoc
-class __$$_SaveCepCopyWithImpl<$Res> extends _$CepEventCopyWithImpl<$Res>
-    implements _$$_SaveCepCopyWith<$Res> {
-  __$$_SaveCepCopyWithImpl(_$_SaveCep _value, $Res Function(_$_SaveCep) _then)
-      : super(_value, (v) => _then(v as _$_SaveCep));
+class __$$SaveCepImplCopyWithImpl<$Res>
+    extends _$CepEventCopyWithImpl<$Res, _$SaveCepImpl>
+    implements _$$SaveCepImplCopyWith<$Res> {
+  __$$SaveCepImplCopyWithImpl(
+      _$SaveCepImpl _value, $Res Function(_$SaveCepImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_SaveCep get _value => super._value as _$_SaveCep;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? cep = freezed,
+    Object? cep = null,
   }) {
-    return _then(_$_SaveCep(
-      cep == freezed
+    return _then(_$SaveCepImpl(
+      null == cep
           ? _value.cep
           : cep // ignore: cast_nullable_to_non_nullable
               as CepEntity,
@@ -272,8 +275,8 @@ class __$$_SaveCepCopyWithImpl<$Res> extends _$CepEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SaveCep implements _SaveCep {
-  const _$_SaveCep(this.cep);
+class _$SaveCepImpl implements _SaveCep {
+  const _$SaveCepImpl(this.cep);
 
   @override
   final CepEntity cep;
@@ -284,21 +287,21 @@ class _$_SaveCep implements _SaveCep {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SaveCep &&
-            const DeepCollectionEquality().equals(other.cep, cep));
+            other is _$SaveCepImpl &&
+            (identical(other.cep, cep) || other.cep == cep));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(cep));
+  int get hashCode => Object.hash(runtimeType, cep);
 
   @JsonKey(ignore: true)
   @override
-  _$$_SaveCepCopyWith<_$_SaveCep> get copyWith =>
-      __$$_SaveCepCopyWithImpl<_$_SaveCep>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$SaveCepImplCopyWith<_$SaveCepImpl> get copyWith =>
+      __$$SaveCepImplCopyWithImpl<_$SaveCepImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -315,11 +318,11 @@ class _$_SaveCep implements _SaveCep {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String cep)? loadCepInfo,
-    TResult Function(CepEntity cep)? saveCep,
-    TResult Function()? loadSavedDistricts,
-    TResult Function(String district)? loadSavedCeps,
-    TResult Function(CepEntity ceps)? openInMap,
+    TResult? Function(String cep)? loadCepInfo,
+    TResult? Function(CepEntity cep)? saveCep,
+    TResult? Function()? loadSavedDistricts,
+    TResult? Function(String district)? loadSavedCeps,
+    TResult? Function(CepEntity ceps)? openInMap,
   }) {
     return saveCep?.call(cep);
   }
@@ -355,11 +358,11 @@ class _$_SaveCep implements _SaveCep {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_LoadCepInfo value)? loadCepInfo,
-    TResult Function(_SaveCep value)? saveCep,
-    TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
-    TResult Function(_LoadSavedCeps value)? loadSavedCeps,
-    TResult Function(_OpenInMap value)? openInMap,
+    TResult? Function(_LoadCepInfo value)? loadCepInfo,
+    TResult? Function(_SaveCep value)? saveCep,
+    TResult? Function(_LoadSavedDistricts value)? loadSavedDistricts,
+    TResult? Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult? Function(_OpenInMap value)? openInMap,
   }) {
     return saveCep?.call(this);
   }
@@ -382,37 +385,34 @@ class _$_SaveCep implements _SaveCep {
 }
 
 abstract class _SaveCep implements CepEvent {
-  const factory _SaveCep(final CepEntity cep) = _$_SaveCep;
+  const factory _SaveCep(final CepEntity cep) = _$SaveCepImpl;
 
   CepEntity get cep;
   @JsonKey(ignore: true)
-  _$$_SaveCepCopyWith<_$_SaveCep> get copyWith =>
+  _$$SaveCepImplCopyWith<_$SaveCepImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_LoadSavedDistrictsCopyWith<$Res> {
-  factory _$$_LoadSavedDistrictsCopyWith(_$_LoadSavedDistricts value,
-          $Res Function(_$_LoadSavedDistricts) then) =
-      __$$_LoadSavedDistrictsCopyWithImpl<$Res>;
+abstract class _$$LoadSavedDistrictsImplCopyWith<$Res> {
+  factory _$$LoadSavedDistrictsImplCopyWith(_$LoadSavedDistrictsImpl value,
+          $Res Function(_$LoadSavedDistrictsImpl) then) =
+      __$$LoadSavedDistrictsImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoadSavedDistrictsCopyWithImpl<$Res>
-    extends _$CepEventCopyWithImpl<$Res>
-    implements _$$_LoadSavedDistrictsCopyWith<$Res> {
-  __$$_LoadSavedDistrictsCopyWithImpl(
-      _$_LoadSavedDistricts _value, $Res Function(_$_LoadSavedDistricts) _then)
-      : super(_value, (v) => _then(v as _$_LoadSavedDistricts));
-
-  @override
-  _$_LoadSavedDistricts get _value => super._value as _$_LoadSavedDistricts;
+class __$$LoadSavedDistrictsImplCopyWithImpl<$Res>
+    extends _$CepEventCopyWithImpl<$Res, _$LoadSavedDistrictsImpl>
+    implements _$$LoadSavedDistrictsImplCopyWith<$Res> {
+  __$$LoadSavedDistrictsImplCopyWithImpl(_$LoadSavedDistrictsImpl _value,
+      $Res Function(_$LoadSavedDistrictsImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_LoadSavedDistricts implements _LoadSavedDistricts {
-  const _$_LoadSavedDistricts();
+class _$LoadSavedDistrictsImpl implements _LoadSavedDistricts {
+  const _$LoadSavedDistrictsImpl();
 
   @override
   String toString() {
@@ -420,9 +420,9 @@ class _$_LoadSavedDistricts implements _LoadSavedDistricts {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_LoadSavedDistricts);
+        (other.runtimeType == runtimeType && other is _$LoadSavedDistrictsImpl);
   }
 
   @override
@@ -443,11 +443,11 @@ class _$_LoadSavedDistricts implements _LoadSavedDistricts {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String cep)? loadCepInfo,
-    TResult Function(CepEntity cep)? saveCep,
-    TResult Function()? loadSavedDistricts,
-    TResult Function(String district)? loadSavedCeps,
-    TResult Function(CepEntity ceps)? openInMap,
+    TResult? Function(String cep)? loadCepInfo,
+    TResult? Function(CepEntity cep)? saveCep,
+    TResult? Function()? loadSavedDistricts,
+    TResult? Function(String district)? loadSavedCeps,
+    TResult? Function(CepEntity ceps)? openInMap,
   }) {
     return loadSavedDistricts?.call();
   }
@@ -483,11 +483,11 @@ class _$_LoadSavedDistricts implements _LoadSavedDistricts {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_LoadCepInfo value)? loadCepInfo,
-    TResult Function(_SaveCep value)? saveCep,
-    TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
-    TResult Function(_LoadSavedCeps value)? loadSavedCeps,
-    TResult Function(_OpenInMap value)? openInMap,
+    TResult? Function(_LoadCepInfo value)? loadCepInfo,
+    TResult? Function(_SaveCep value)? saveCep,
+    TResult? Function(_LoadSavedDistricts value)? loadSavedDistricts,
+    TResult? Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult? Function(_OpenInMap value)? openInMap,
   }) {
     return loadSavedDistricts?.call(this);
   }
@@ -510,33 +510,33 @@ class _$_LoadSavedDistricts implements _LoadSavedDistricts {
 }
 
 abstract class _LoadSavedDistricts implements CepEvent {
-  const factory _LoadSavedDistricts() = _$_LoadSavedDistricts;
+  const factory _LoadSavedDistricts() = _$LoadSavedDistrictsImpl;
 }
 
 /// @nodoc
-abstract class _$$_LoadSavedCepsCopyWith<$Res> {
-  factory _$$_LoadSavedCepsCopyWith(
-          _$_LoadSavedCeps value, $Res Function(_$_LoadSavedCeps) then) =
-      __$$_LoadSavedCepsCopyWithImpl<$Res>;
+abstract class _$$LoadSavedCepsImplCopyWith<$Res> {
+  factory _$$LoadSavedCepsImplCopyWith(
+          _$LoadSavedCepsImpl value, $Res Function(_$LoadSavedCepsImpl) then) =
+      __$$LoadSavedCepsImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String district});
 }
 
 /// @nodoc
-class __$$_LoadSavedCepsCopyWithImpl<$Res> extends _$CepEventCopyWithImpl<$Res>
-    implements _$$_LoadSavedCepsCopyWith<$Res> {
-  __$$_LoadSavedCepsCopyWithImpl(
-      _$_LoadSavedCeps _value, $Res Function(_$_LoadSavedCeps) _then)
-      : super(_value, (v) => _then(v as _$_LoadSavedCeps));
+class __$$LoadSavedCepsImplCopyWithImpl<$Res>
+    extends _$CepEventCopyWithImpl<$Res, _$LoadSavedCepsImpl>
+    implements _$$LoadSavedCepsImplCopyWith<$Res> {
+  __$$LoadSavedCepsImplCopyWithImpl(
+      _$LoadSavedCepsImpl _value, $Res Function(_$LoadSavedCepsImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_LoadSavedCeps get _value => super._value as _$_LoadSavedCeps;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? district = freezed,
+    Object? district = null,
   }) {
-    return _then(_$_LoadSavedCeps(
-      district == freezed
+    return _then(_$LoadSavedCepsImpl(
+      null == district
           ? _value.district
           : district // ignore: cast_nullable_to_non_nullable
               as String,
@@ -546,8 +546,8 @@ class __$$_LoadSavedCepsCopyWithImpl<$Res> extends _$CepEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoadSavedCeps implements _LoadSavedCeps {
-  const _$_LoadSavedCeps(this.district);
+class _$LoadSavedCepsImpl implements _LoadSavedCeps {
+  const _$LoadSavedCepsImpl(this.district);
 
   @override
   final String district;
@@ -558,21 +558,22 @@ class _$_LoadSavedCeps implements _LoadSavedCeps {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadSavedCeps &&
-            const DeepCollectionEquality().equals(other.district, district));
+            other is _$LoadSavedCepsImpl &&
+            (identical(other.district, district) ||
+                other.district == district));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(district));
+  int get hashCode => Object.hash(runtimeType, district);
 
   @JsonKey(ignore: true)
   @override
-  _$$_LoadSavedCepsCopyWith<_$_LoadSavedCeps> get copyWith =>
-      __$$_LoadSavedCepsCopyWithImpl<_$_LoadSavedCeps>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$LoadSavedCepsImplCopyWith<_$LoadSavedCepsImpl> get copyWith =>
+      __$$LoadSavedCepsImplCopyWithImpl<_$LoadSavedCepsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -589,11 +590,11 @@ class _$_LoadSavedCeps implements _LoadSavedCeps {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String cep)? loadCepInfo,
-    TResult Function(CepEntity cep)? saveCep,
-    TResult Function()? loadSavedDistricts,
-    TResult Function(String district)? loadSavedCeps,
-    TResult Function(CepEntity ceps)? openInMap,
+    TResult? Function(String cep)? loadCepInfo,
+    TResult? Function(CepEntity cep)? saveCep,
+    TResult? Function()? loadSavedDistricts,
+    TResult? Function(String district)? loadSavedCeps,
+    TResult? Function(CepEntity ceps)? openInMap,
   }) {
     return loadSavedCeps?.call(district);
   }
@@ -629,11 +630,11 @@ class _$_LoadSavedCeps implements _LoadSavedCeps {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_LoadCepInfo value)? loadCepInfo,
-    TResult Function(_SaveCep value)? saveCep,
-    TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
-    TResult Function(_LoadSavedCeps value)? loadSavedCeps,
-    TResult Function(_OpenInMap value)? openInMap,
+    TResult? Function(_LoadCepInfo value)? loadCepInfo,
+    TResult? Function(_SaveCep value)? saveCep,
+    TResult? Function(_LoadSavedDistricts value)? loadSavedDistricts,
+    TResult? Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult? Function(_OpenInMap value)? openInMap,
   }) {
     return loadSavedCeps?.call(this);
   }
@@ -656,38 +657,38 @@ class _$_LoadSavedCeps implements _LoadSavedCeps {
 }
 
 abstract class _LoadSavedCeps implements CepEvent {
-  const factory _LoadSavedCeps(final String district) = _$_LoadSavedCeps;
+  const factory _LoadSavedCeps(final String district) = _$LoadSavedCepsImpl;
 
   String get district;
   @JsonKey(ignore: true)
-  _$$_LoadSavedCepsCopyWith<_$_LoadSavedCeps> get copyWith =>
+  _$$LoadSavedCepsImplCopyWith<_$LoadSavedCepsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_OpenInMapCopyWith<$Res> {
-  factory _$$_OpenInMapCopyWith(
-          _$_OpenInMap value, $Res Function(_$_OpenInMap) then) =
-      __$$_OpenInMapCopyWithImpl<$Res>;
+abstract class _$$OpenInMapImplCopyWith<$Res> {
+  factory _$$OpenInMapImplCopyWith(
+          _$OpenInMapImpl value, $Res Function(_$OpenInMapImpl) then) =
+      __$$OpenInMapImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({CepEntity ceps});
 }
 
 /// @nodoc
-class __$$_OpenInMapCopyWithImpl<$Res> extends _$CepEventCopyWithImpl<$Res>
-    implements _$$_OpenInMapCopyWith<$Res> {
-  __$$_OpenInMapCopyWithImpl(
-      _$_OpenInMap _value, $Res Function(_$_OpenInMap) _then)
-      : super(_value, (v) => _then(v as _$_OpenInMap));
+class __$$OpenInMapImplCopyWithImpl<$Res>
+    extends _$CepEventCopyWithImpl<$Res, _$OpenInMapImpl>
+    implements _$$OpenInMapImplCopyWith<$Res> {
+  __$$OpenInMapImplCopyWithImpl(
+      _$OpenInMapImpl _value, $Res Function(_$OpenInMapImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_OpenInMap get _value => super._value as _$_OpenInMap;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ceps = freezed,
+    Object? ceps = null,
   }) {
-    return _then(_$_OpenInMap(
-      ceps == freezed
+    return _then(_$OpenInMapImpl(
+      null == ceps
           ? _value.ceps
           : ceps // ignore: cast_nullable_to_non_nullable
               as CepEntity,
@@ -697,8 +698,8 @@ class __$$_OpenInMapCopyWithImpl<$Res> extends _$CepEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_OpenInMap implements _OpenInMap {
-  const _$_OpenInMap(this.ceps);
+class _$OpenInMapImpl implements _OpenInMap {
+  const _$OpenInMapImpl(this.ceps);
 
   @override
   final CepEntity ceps;
@@ -709,21 +710,21 @@ class _$_OpenInMap implements _OpenInMap {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_OpenInMap &&
-            const DeepCollectionEquality().equals(other.ceps, ceps));
+            other is _$OpenInMapImpl &&
+            (identical(other.ceps, ceps) || other.ceps == ceps));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(ceps));
+  int get hashCode => Object.hash(runtimeType, ceps);
 
   @JsonKey(ignore: true)
   @override
-  _$$_OpenInMapCopyWith<_$_OpenInMap> get copyWith =>
-      __$$_OpenInMapCopyWithImpl<_$_OpenInMap>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$OpenInMapImplCopyWith<_$OpenInMapImpl> get copyWith =>
+      __$$OpenInMapImplCopyWithImpl<_$OpenInMapImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -740,11 +741,11 @@ class _$_OpenInMap implements _OpenInMap {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String cep)? loadCepInfo,
-    TResult Function(CepEntity cep)? saveCep,
-    TResult Function()? loadSavedDistricts,
-    TResult Function(String district)? loadSavedCeps,
-    TResult Function(CepEntity ceps)? openInMap,
+    TResult? Function(String cep)? loadCepInfo,
+    TResult? Function(CepEntity cep)? saveCep,
+    TResult? Function()? loadSavedDistricts,
+    TResult? Function(String district)? loadSavedCeps,
+    TResult? Function(CepEntity ceps)? openInMap,
   }) {
     return openInMap?.call(ceps);
   }
@@ -780,11 +781,11 @@ class _$_OpenInMap implements _OpenInMap {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_LoadCepInfo value)? loadCepInfo,
-    TResult Function(_SaveCep value)? saveCep,
-    TResult Function(_LoadSavedDistricts value)? loadSavedDistricts,
-    TResult Function(_LoadSavedCeps value)? loadSavedCeps,
-    TResult Function(_OpenInMap value)? openInMap,
+    TResult? Function(_LoadCepInfo value)? loadCepInfo,
+    TResult? Function(_SaveCep value)? saveCep,
+    TResult? Function(_LoadSavedDistricts value)? loadSavedDistricts,
+    TResult? Function(_LoadSavedCeps value)? loadSavedCeps,
+    TResult? Function(_OpenInMap value)? openInMap,
   }) {
     return openInMap?.call(this);
   }
@@ -807,11 +808,11 @@ class _$_OpenInMap implements _OpenInMap {
 }
 
 abstract class _OpenInMap implements CepEvent {
-  const factory _OpenInMap(final CepEntity ceps) = _$_OpenInMap;
+  const factory _OpenInMap(final CepEntity ceps) = _$OpenInMapImpl;
 
   CepEntity get ceps;
   @JsonKey(ignore: true)
-  _$$_OpenInMapCopyWith<_$_OpenInMap> get copyWith =>
+  _$$OpenInMapImplCopyWith<_$OpenInMapImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -836,19 +837,19 @@ mixin _$CepState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingCep,
-    TResult Function(CepEntity cep)? loadedCep,
-    TResult Function()? inexistentCepError,
-    TResult Function()? loadingSavedDistricts,
-    TResult Function(List<String> districts)? loadedSavedDistricts,
-    TResult Function()? loadingCepsByDistrict,
-    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
-    TResult Function()? savingCep,
-    TResult Function()? showSuccessSnackbar,
-    TResult Function()? showErrorSnackbar,
-    TResult Function()? loadingMap,
-    TResult Function(LatLng position)? mapLoaded,
+    TResult? Function()? initial,
+    TResult? Function()? loadingCep,
+    TResult? Function(CepEntity cep)? loadedCep,
+    TResult? Function()? inexistentCepError,
+    TResult? Function()? loadingSavedDistricts,
+    TResult? Function(List<String> districts)? loadedSavedDistricts,
+    TResult? Function()? loadingCepsByDistrict,
+    TResult? Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult? Function()? savingCep,
+    TResult? Function()? showSuccessSnackbar,
+    TResult? Function()? showErrorSnackbar,
+    TResult? Function()? loadingMap,
+    TResult? Function(LatLng position)? mapLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -890,19 +891,19 @@ mixin _$CepState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingCep value)? loadingCep,
-    TResult Function(_LoadedCep value)? loadedCep,
-    TResult Function(_InexistentCepError value)? inexistentCepError,
-    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
-    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
-    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
-    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
-    TResult Function(_SavingCep value)? savingCep,
-    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
-    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
-    TResult Function(_LoadingMap value)? loadingMap,
-    TResult Function(_MapLoaded value)? mapLoaded,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingCep value)? loadingCep,
+    TResult? Function(_LoadedCep value)? loadedCep,
+    TResult? Function(_InexistentCepError value)? inexistentCepError,
+    TResult? Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult? Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult? Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult? Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult? Function(_SavingCep value)? savingCep,
+    TResult? Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult? Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult? Function(_LoadingMap value)? loadingMap,
+    TResult? Function(_MapLoaded value)? mapLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -928,39 +929,40 @@ mixin _$CepState {
 /// @nodoc
 abstract class $CepStateCopyWith<$Res> {
   factory $CepStateCopyWith(CepState value, $Res Function(CepState) then) =
-      _$CepStateCopyWithImpl<$Res>;
+      _$CepStateCopyWithImpl<$Res, CepState>;
 }
 
 /// @nodoc
-class _$CepStateCopyWithImpl<$Res> implements $CepStateCopyWith<$Res> {
+class _$CepStateCopyWithImpl<$Res, $Val extends CepState>
+    implements $CepStateCopyWith<$Res> {
   _$CepStateCopyWithImpl(this._value, this._then);
 
-  final CepState _value;
   // ignore: unused_field
-  final $Res Function(CepState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$$_InitialCopyWith<$Res> {
-  factory _$$_InitialCopyWith(
-          _$_Initial value, $Res Function(_$_Initial) then) =
-      __$$_InitialCopyWithImpl<$Res>;
+abstract class _$$InitialImplCopyWith<$Res> {
+  factory _$$InitialImplCopyWith(
+          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
+      __$$InitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InitialCopyWithImpl<$Res> extends _$CepStateCopyWithImpl<$Res>
-    implements _$$_InitialCopyWith<$Res> {
-  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
-      : super(_value, (v) => _then(v as _$_Initial));
-
-  @override
-  _$_Initial get _value => super._value as _$_Initial;
+class __$$InitialImplCopyWithImpl<$Res>
+    extends _$CepStateCopyWithImpl<$Res, _$InitialImpl>
+    implements _$$InitialImplCopyWith<$Res> {
+  __$$InitialImplCopyWithImpl(
+      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
+class _$InitialImpl implements _Initial {
+  const _$InitialImpl();
 
   @override
   String toString() {
@@ -968,9 +970,9 @@ class _$_Initial implements _Initial {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Initial);
+        (other.runtimeType == runtimeType && other is _$InitialImpl);
   }
 
   @override
@@ -999,19 +1001,19 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingCep,
-    TResult Function(CepEntity cep)? loadedCep,
-    TResult Function()? inexistentCepError,
-    TResult Function()? loadingSavedDistricts,
-    TResult Function(List<String> districts)? loadedSavedDistricts,
-    TResult Function()? loadingCepsByDistrict,
-    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
-    TResult Function()? savingCep,
-    TResult Function()? showSuccessSnackbar,
-    TResult Function()? showErrorSnackbar,
-    TResult Function()? loadingMap,
-    TResult Function(LatLng position)? mapLoaded,
+    TResult? Function()? initial,
+    TResult? Function()? loadingCep,
+    TResult? Function(CepEntity cep)? loadedCep,
+    TResult? Function()? inexistentCepError,
+    TResult? Function()? loadingSavedDistricts,
+    TResult? Function(List<String> districts)? loadedSavedDistricts,
+    TResult? Function()? loadingCepsByDistrict,
+    TResult? Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult? Function()? savingCep,
+    TResult? Function()? showSuccessSnackbar,
+    TResult? Function()? showErrorSnackbar,
+    TResult? Function()? loadingMap,
+    TResult? Function(LatLng position)? mapLoaded,
   }) {
     return initial?.call();
   }
@@ -1065,19 +1067,19 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingCep value)? loadingCep,
-    TResult Function(_LoadedCep value)? loadedCep,
-    TResult Function(_InexistentCepError value)? inexistentCepError,
-    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
-    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
-    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
-    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
-    TResult Function(_SavingCep value)? savingCep,
-    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
-    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
-    TResult Function(_LoadingMap value)? loadingMap,
-    TResult Function(_MapLoaded value)? mapLoaded,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingCep value)? loadingCep,
+    TResult? Function(_LoadedCep value)? loadedCep,
+    TResult? Function(_InexistentCepError value)? inexistentCepError,
+    TResult? Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult? Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult? Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult? Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult? Function(_SavingCep value)? savingCep,
+    TResult? Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult? Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult? Function(_LoadingMap value)? loadingMap,
+    TResult? Function(_MapLoaded value)? mapLoaded,
   }) {
     return initial?.call(this);
   }
@@ -1108,31 +1110,29 @@ class _$_Initial implements _Initial {
 }
 
 abstract class _Initial implements CepState {
-  const factory _Initial() = _$_Initial;
+  const factory _Initial() = _$InitialImpl;
 }
 
 /// @nodoc
-abstract class _$$_LoadingCepCopyWith<$Res> {
-  factory _$$_LoadingCepCopyWith(
-          _$_LoadingCep value, $Res Function(_$_LoadingCep) then) =
-      __$$_LoadingCepCopyWithImpl<$Res>;
+abstract class _$$LoadingCepImplCopyWith<$Res> {
+  factory _$$LoadingCepImplCopyWith(
+          _$LoadingCepImpl value, $Res Function(_$LoadingCepImpl) then) =
+      __$$LoadingCepImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoadingCepCopyWithImpl<$Res> extends _$CepStateCopyWithImpl<$Res>
-    implements _$$_LoadingCepCopyWith<$Res> {
-  __$$_LoadingCepCopyWithImpl(
-      _$_LoadingCep _value, $Res Function(_$_LoadingCep) _then)
-      : super(_value, (v) => _then(v as _$_LoadingCep));
-
-  @override
-  _$_LoadingCep get _value => super._value as _$_LoadingCep;
+class __$$LoadingCepImplCopyWithImpl<$Res>
+    extends _$CepStateCopyWithImpl<$Res, _$LoadingCepImpl>
+    implements _$$LoadingCepImplCopyWith<$Res> {
+  __$$LoadingCepImplCopyWithImpl(
+      _$LoadingCepImpl _value, $Res Function(_$LoadingCepImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_LoadingCep implements _LoadingCep {
-  const _$_LoadingCep();
+class _$LoadingCepImpl implements _LoadingCep {
+  const _$LoadingCepImpl();
 
   @override
   String toString() {
@@ -1140,9 +1140,9 @@ class _$_LoadingCep implements _LoadingCep {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_LoadingCep);
+        (other.runtimeType == runtimeType && other is _$LoadingCepImpl);
   }
 
   @override
@@ -1171,19 +1171,19 @@ class _$_LoadingCep implements _LoadingCep {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingCep,
-    TResult Function(CepEntity cep)? loadedCep,
-    TResult Function()? inexistentCepError,
-    TResult Function()? loadingSavedDistricts,
-    TResult Function(List<String> districts)? loadedSavedDistricts,
-    TResult Function()? loadingCepsByDistrict,
-    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
-    TResult Function()? savingCep,
-    TResult Function()? showSuccessSnackbar,
-    TResult Function()? showErrorSnackbar,
-    TResult Function()? loadingMap,
-    TResult Function(LatLng position)? mapLoaded,
+    TResult? Function()? initial,
+    TResult? Function()? loadingCep,
+    TResult? Function(CepEntity cep)? loadedCep,
+    TResult? Function()? inexistentCepError,
+    TResult? Function()? loadingSavedDistricts,
+    TResult? Function(List<String> districts)? loadedSavedDistricts,
+    TResult? Function()? loadingCepsByDistrict,
+    TResult? Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult? Function()? savingCep,
+    TResult? Function()? showSuccessSnackbar,
+    TResult? Function()? showErrorSnackbar,
+    TResult? Function()? loadingMap,
+    TResult? Function(LatLng position)? mapLoaded,
   }) {
     return loadingCep?.call();
   }
@@ -1237,19 +1237,19 @@ class _$_LoadingCep implements _LoadingCep {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingCep value)? loadingCep,
-    TResult Function(_LoadedCep value)? loadedCep,
-    TResult Function(_InexistentCepError value)? inexistentCepError,
-    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
-    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
-    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
-    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
-    TResult Function(_SavingCep value)? savingCep,
-    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
-    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
-    TResult Function(_LoadingMap value)? loadingMap,
-    TResult Function(_MapLoaded value)? mapLoaded,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingCep value)? loadingCep,
+    TResult? Function(_LoadedCep value)? loadedCep,
+    TResult? Function(_InexistentCepError value)? inexistentCepError,
+    TResult? Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult? Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult? Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult? Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult? Function(_SavingCep value)? savingCep,
+    TResult? Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult? Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult? Function(_LoadingMap value)? loadingMap,
+    TResult? Function(_MapLoaded value)? mapLoaded,
   }) {
     return loadingCep?.call(this);
   }
@@ -1280,33 +1280,33 @@ class _$_LoadingCep implements _LoadingCep {
 }
 
 abstract class _LoadingCep implements CepState {
-  const factory _LoadingCep() = _$_LoadingCep;
+  const factory _LoadingCep() = _$LoadingCepImpl;
 }
 
 /// @nodoc
-abstract class _$$_LoadedCepCopyWith<$Res> {
-  factory _$$_LoadedCepCopyWith(
-          _$_LoadedCep value, $Res Function(_$_LoadedCep) then) =
-      __$$_LoadedCepCopyWithImpl<$Res>;
+abstract class _$$LoadedCepImplCopyWith<$Res> {
+  factory _$$LoadedCepImplCopyWith(
+          _$LoadedCepImpl value, $Res Function(_$LoadedCepImpl) then) =
+      __$$LoadedCepImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({CepEntity cep});
 }
 
 /// @nodoc
-class __$$_LoadedCepCopyWithImpl<$Res> extends _$CepStateCopyWithImpl<$Res>
-    implements _$$_LoadedCepCopyWith<$Res> {
-  __$$_LoadedCepCopyWithImpl(
-      _$_LoadedCep _value, $Res Function(_$_LoadedCep) _then)
-      : super(_value, (v) => _then(v as _$_LoadedCep));
+class __$$LoadedCepImplCopyWithImpl<$Res>
+    extends _$CepStateCopyWithImpl<$Res, _$LoadedCepImpl>
+    implements _$$LoadedCepImplCopyWith<$Res> {
+  __$$LoadedCepImplCopyWithImpl(
+      _$LoadedCepImpl _value, $Res Function(_$LoadedCepImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_LoadedCep get _value => super._value as _$_LoadedCep;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? cep = freezed,
+    Object? cep = null,
   }) {
-    return _then(_$_LoadedCep(
-      cep == freezed
+    return _then(_$LoadedCepImpl(
+      null == cep
           ? _value.cep
           : cep // ignore: cast_nullable_to_non_nullable
               as CepEntity,
@@ -1316,8 +1316,8 @@ class __$$_LoadedCepCopyWithImpl<$Res> extends _$CepStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoadedCep implements _LoadedCep {
-  const _$_LoadedCep(this.cep);
+class _$LoadedCepImpl implements _LoadedCep {
+  const _$LoadedCepImpl(this.cep);
 
   @override
   final CepEntity cep;
@@ -1328,21 +1328,21 @@ class _$_LoadedCep implements _LoadedCep {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadedCep &&
-            const DeepCollectionEquality().equals(other.cep, cep));
+            other is _$LoadedCepImpl &&
+            (identical(other.cep, cep) || other.cep == cep));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(cep));
+  int get hashCode => Object.hash(runtimeType, cep);
 
   @JsonKey(ignore: true)
   @override
-  _$$_LoadedCepCopyWith<_$_LoadedCep> get copyWith =>
-      __$$_LoadedCepCopyWithImpl<_$_LoadedCep>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$LoadedCepImplCopyWith<_$LoadedCepImpl> get copyWith =>
+      __$$LoadedCepImplCopyWithImpl<_$LoadedCepImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1367,19 +1367,19 @@ class _$_LoadedCep implements _LoadedCep {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingCep,
-    TResult Function(CepEntity cep)? loadedCep,
-    TResult Function()? inexistentCepError,
-    TResult Function()? loadingSavedDistricts,
-    TResult Function(List<String> districts)? loadedSavedDistricts,
-    TResult Function()? loadingCepsByDistrict,
-    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
-    TResult Function()? savingCep,
-    TResult Function()? showSuccessSnackbar,
-    TResult Function()? showErrorSnackbar,
-    TResult Function()? loadingMap,
-    TResult Function(LatLng position)? mapLoaded,
+    TResult? Function()? initial,
+    TResult? Function()? loadingCep,
+    TResult? Function(CepEntity cep)? loadedCep,
+    TResult? Function()? inexistentCepError,
+    TResult? Function()? loadingSavedDistricts,
+    TResult? Function(List<String> districts)? loadedSavedDistricts,
+    TResult? Function()? loadingCepsByDistrict,
+    TResult? Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult? Function()? savingCep,
+    TResult? Function()? showSuccessSnackbar,
+    TResult? Function()? showErrorSnackbar,
+    TResult? Function()? loadingMap,
+    TResult? Function(LatLng position)? mapLoaded,
   }) {
     return loadedCep?.call(cep);
   }
@@ -1433,19 +1433,19 @@ class _$_LoadedCep implements _LoadedCep {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingCep value)? loadingCep,
-    TResult Function(_LoadedCep value)? loadedCep,
-    TResult Function(_InexistentCepError value)? inexistentCepError,
-    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
-    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
-    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
-    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
-    TResult Function(_SavingCep value)? savingCep,
-    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
-    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
-    TResult Function(_LoadingMap value)? loadingMap,
-    TResult Function(_MapLoaded value)? mapLoaded,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingCep value)? loadingCep,
+    TResult? Function(_LoadedCep value)? loadedCep,
+    TResult? Function(_InexistentCepError value)? inexistentCepError,
+    TResult? Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult? Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult? Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult? Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult? Function(_SavingCep value)? savingCep,
+    TResult? Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult? Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult? Function(_LoadingMap value)? loadingMap,
+    TResult? Function(_MapLoaded value)? mapLoaded,
   }) {
     return loadedCep?.call(this);
   }
@@ -1476,37 +1476,34 @@ class _$_LoadedCep implements _LoadedCep {
 }
 
 abstract class _LoadedCep implements CepState {
-  const factory _LoadedCep(final CepEntity cep) = _$_LoadedCep;
+  const factory _LoadedCep(final CepEntity cep) = _$LoadedCepImpl;
 
   CepEntity get cep;
   @JsonKey(ignore: true)
-  _$$_LoadedCepCopyWith<_$_LoadedCep> get copyWith =>
+  _$$LoadedCepImplCopyWith<_$LoadedCepImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_InexistentCepErrorCopyWith<$Res> {
-  factory _$$_InexistentCepErrorCopyWith(_$_InexistentCepError value,
-          $Res Function(_$_InexistentCepError) then) =
-      __$$_InexistentCepErrorCopyWithImpl<$Res>;
+abstract class _$$InexistentCepErrorImplCopyWith<$Res> {
+  factory _$$InexistentCepErrorImplCopyWith(_$InexistentCepErrorImpl value,
+          $Res Function(_$InexistentCepErrorImpl) then) =
+      __$$InexistentCepErrorImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InexistentCepErrorCopyWithImpl<$Res>
-    extends _$CepStateCopyWithImpl<$Res>
-    implements _$$_InexistentCepErrorCopyWith<$Res> {
-  __$$_InexistentCepErrorCopyWithImpl(
-      _$_InexistentCepError _value, $Res Function(_$_InexistentCepError) _then)
-      : super(_value, (v) => _then(v as _$_InexistentCepError));
-
-  @override
-  _$_InexistentCepError get _value => super._value as _$_InexistentCepError;
+class __$$InexistentCepErrorImplCopyWithImpl<$Res>
+    extends _$CepStateCopyWithImpl<$Res, _$InexistentCepErrorImpl>
+    implements _$$InexistentCepErrorImplCopyWith<$Res> {
+  __$$InexistentCepErrorImplCopyWithImpl(_$InexistentCepErrorImpl _value,
+      $Res Function(_$InexistentCepErrorImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_InexistentCepError implements _InexistentCepError {
-  const _$_InexistentCepError();
+class _$InexistentCepErrorImpl implements _InexistentCepError {
+  const _$InexistentCepErrorImpl();
 
   @override
   String toString() {
@@ -1514,9 +1511,9 @@ class _$_InexistentCepError implements _InexistentCepError {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_InexistentCepError);
+        (other.runtimeType == runtimeType && other is _$InexistentCepErrorImpl);
   }
 
   @override
@@ -1545,19 +1542,19 @@ class _$_InexistentCepError implements _InexistentCepError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingCep,
-    TResult Function(CepEntity cep)? loadedCep,
-    TResult Function()? inexistentCepError,
-    TResult Function()? loadingSavedDistricts,
-    TResult Function(List<String> districts)? loadedSavedDistricts,
-    TResult Function()? loadingCepsByDistrict,
-    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
-    TResult Function()? savingCep,
-    TResult Function()? showSuccessSnackbar,
-    TResult Function()? showErrorSnackbar,
-    TResult Function()? loadingMap,
-    TResult Function(LatLng position)? mapLoaded,
+    TResult? Function()? initial,
+    TResult? Function()? loadingCep,
+    TResult? Function(CepEntity cep)? loadedCep,
+    TResult? Function()? inexistentCepError,
+    TResult? Function()? loadingSavedDistricts,
+    TResult? Function(List<String> districts)? loadedSavedDistricts,
+    TResult? Function()? loadingCepsByDistrict,
+    TResult? Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult? Function()? savingCep,
+    TResult? Function()? showSuccessSnackbar,
+    TResult? Function()? showErrorSnackbar,
+    TResult? Function()? loadingMap,
+    TResult? Function(LatLng position)? mapLoaded,
   }) {
     return inexistentCepError?.call();
   }
@@ -1611,19 +1608,19 @@ class _$_InexistentCepError implements _InexistentCepError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingCep value)? loadingCep,
-    TResult Function(_LoadedCep value)? loadedCep,
-    TResult Function(_InexistentCepError value)? inexistentCepError,
-    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
-    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
-    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
-    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
-    TResult Function(_SavingCep value)? savingCep,
-    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
-    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
-    TResult Function(_LoadingMap value)? loadingMap,
-    TResult Function(_MapLoaded value)? mapLoaded,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingCep value)? loadingCep,
+    TResult? Function(_LoadedCep value)? loadedCep,
+    TResult? Function(_InexistentCepError value)? inexistentCepError,
+    TResult? Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult? Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult? Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult? Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult? Function(_SavingCep value)? savingCep,
+    TResult? Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult? Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult? Function(_LoadingMap value)? loadingMap,
+    TResult? Function(_MapLoaded value)? mapLoaded,
   }) {
     return inexistentCepError?.call(this);
   }
@@ -1654,33 +1651,30 @@ class _$_InexistentCepError implements _InexistentCepError {
 }
 
 abstract class _InexistentCepError implements CepState {
-  const factory _InexistentCepError() = _$_InexistentCepError;
+  const factory _InexistentCepError() = _$InexistentCepErrorImpl;
 }
 
 /// @nodoc
-abstract class _$$_LoadingSavedDistrictsCopyWith<$Res> {
-  factory _$$_LoadingSavedDistrictsCopyWith(_$_LoadingSavedDistricts value,
-          $Res Function(_$_LoadingSavedDistricts) then) =
-      __$$_LoadingSavedDistrictsCopyWithImpl<$Res>;
+abstract class _$$LoadingSavedDistrictsImplCopyWith<$Res> {
+  factory _$$LoadingSavedDistrictsImplCopyWith(
+          _$LoadingSavedDistrictsImpl value,
+          $Res Function(_$LoadingSavedDistrictsImpl) then) =
+      __$$LoadingSavedDistrictsImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoadingSavedDistrictsCopyWithImpl<$Res>
-    extends _$CepStateCopyWithImpl<$Res>
-    implements _$$_LoadingSavedDistrictsCopyWith<$Res> {
-  __$$_LoadingSavedDistrictsCopyWithImpl(_$_LoadingSavedDistricts _value,
-      $Res Function(_$_LoadingSavedDistricts) _then)
-      : super(_value, (v) => _then(v as _$_LoadingSavedDistricts));
-
-  @override
-  _$_LoadingSavedDistricts get _value =>
-      super._value as _$_LoadingSavedDistricts;
+class __$$LoadingSavedDistrictsImplCopyWithImpl<$Res>
+    extends _$CepStateCopyWithImpl<$Res, _$LoadingSavedDistrictsImpl>
+    implements _$$LoadingSavedDistrictsImplCopyWith<$Res> {
+  __$$LoadingSavedDistrictsImplCopyWithImpl(_$LoadingSavedDistrictsImpl _value,
+      $Res Function(_$LoadingSavedDistrictsImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_LoadingSavedDistricts implements _LoadingSavedDistricts {
-  const _$_LoadingSavedDistricts();
+class _$LoadingSavedDistrictsImpl implements _LoadingSavedDistricts {
+  const _$LoadingSavedDistrictsImpl();
 
   @override
   String toString() {
@@ -1688,9 +1682,10 @@ class _$_LoadingSavedDistricts implements _LoadingSavedDistricts {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_LoadingSavedDistricts);
+        (other.runtimeType == runtimeType &&
+            other is _$LoadingSavedDistrictsImpl);
   }
 
   @override
@@ -1719,19 +1714,19 @@ class _$_LoadingSavedDistricts implements _LoadingSavedDistricts {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingCep,
-    TResult Function(CepEntity cep)? loadedCep,
-    TResult Function()? inexistentCepError,
-    TResult Function()? loadingSavedDistricts,
-    TResult Function(List<String> districts)? loadedSavedDistricts,
-    TResult Function()? loadingCepsByDistrict,
-    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
-    TResult Function()? savingCep,
-    TResult Function()? showSuccessSnackbar,
-    TResult Function()? showErrorSnackbar,
-    TResult Function()? loadingMap,
-    TResult Function(LatLng position)? mapLoaded,
+    TResult? Function()? initial,
+    TResult? Function()? loadingCep,
+    TResult? Function(CepEntity cep)? loadedCep,
+    TResult? Function()? inexistentCepError,
+    TResult? Function()? loadingSavedDistricts,
+    TResult? Function(List<String> districts)? loadedSavedDistricts,
+    TResult? Function()? loadingCepsByDistrict,
+    TResult? Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult? Function()? savingCep,
+    TResult? Function()? showSuccessSnackbar,
+    TResult? Function()? showErrorSnackbar,
+    TResult? Function()? loadingMap,
+    TResult? Function(LatLng position)? mapLoaded,
   }) {
     return loadingSavedDistricts?.call();
   }
@@ -1785,19 +1780,19 @@ class _$_LoadingSavedDistricts implements _LoadingSavedDistricts {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingCep value)? loadingCep,
-    TResult Function(_LoadedCep value)? loadedCep,
-    TResult Function(_InexistentCepError value)? inexistentCepError,
-    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
-    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
-    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
-    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
-    TResult Function(_SavingCep value)? savingCep,
-    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
-    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
-    TResult Function(_LoadingMap value)? loadingMap,
-    TResult Function(_MapLoaded value)? mapLoaded,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingCep value)? loadingCep,
+    TResult? Function(_LoadedCep value)? loadedCep,
+    TResult? Function(_InexistentCepError value)? inexistentCepError,
+    TResult? Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult? Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult? Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult? Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult? Function(_SavingCep value)? savingCep,
+    TResult? Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult? Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult? Function(_LoadingMap value)? loadingMap,
+    TResult? Function(_MapLoaded value)? mapLoaded,
   }) {
     return loadingSavedDistricts?.call(this);
   }
@@ -1828,34 +1823,33 @@ class _$_LoadingSavedDistricts implements _LoadingSavedDistricts {
 }
 
 abstract class _LoadingSavedDistricts implements CepState {
-  const factory _LoadingSavedDistricts() = _$_LoadingSavedDistricts;
+  const factory _LoadingSavedDistricts() = _$LoadingSavedDistrictsImpl;
 }
 
 /// @nodoc
-abstract class _$$_LoadedSavedDistrictsCopyWith<$Res> {
-  factory _$$_LoadedSavedDistrictsCopyWith(_$_LoadedSavedDistricts value,
-          $Res Function(_$_LoadedSavedDistricts) then) =
-      __$$_LoadedSavedDistrictsCopyWithImpl<$Res>;
+abstract class _$$LoadedSavedDistrictsImplCopyWith<$Res> {
+  factory _$$LoadedSavedDistrictsImplCopyWith(_$LoadedSavedDistrictsImpl value,
+          $Res Function(_$LoadedSavedDistrictsImpl) then) =
+      __$$LoadedSavedDistrictsImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({List<String> districts});
 }
 
 /// @nodoc
-class __$$_LoadedSavedDistrictsCopyWithImpl<$Res>
-    extends _$CepStateCopyWithImpl<$Res>
-    implements _$$_LoadedSavedDistrictsCopyWith<$Res> {
-  __$$_LoadedSavedDistrictsCopyWithImpl(_$_LoadedSavedDistricts _value,
-      $Res Function(_$_LoadedSavedDistricts) _then)
-      : super(_value, (v) => _then(v as _$_LoadedSavedDistricts));
+class __$$LoadedSavedDistrictsImplCopyWithImpl<$Res>
+    extends _$CepStateCopyWithImpl<$Res, _$LoadedSavedDistrictsImpl>
+    implements _$$LoadedSavedDistrictsImplCopyWith<$Res> {
+  __$$LoadedSavedDistrictsImplCopyWithImpl(_$LoadedSavedDistrictsImpl _value,
+      $Res Function(_$LoadedSavedDistrictsImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_LoadedSavedDistricts get _value => super._value as _$_LoadedSavedDistricts;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? districts = freezed,
+    Object? districts = null,
   }) {
-    return _then(_$_LoadedSavedDistricts(
-      districts == freezed
+    return _then(_$LoadedSavedDistrictsImpl(
+      null == districts
           ? _value._districts
           : districts // ignore: cast_nullable_to_non_nullable
               as List<String>,
@@ -1865,13 +1859,14 @@ class __$$_LoadedSavedDistrictsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoadedSavedDistricts implements _LoadedSavedDistricts {
-  const _$_LoadedSavedDistricts(final List<String> districts)
+class _$LoadedSavedDistrictsImpl implements _LoadedSavedDistricts {
+  const _$LoadedSavedDistrictsImpl(final List<String> districts)
       : _districts = districts;
 
   final List<String> _districts;
   @override
   List<String> get districts {
+    if (_districts is EqualUnmodifiableListView) return _districts;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_districts);
   }
@@ -1882,10 +1877,10 @@ class _$_LoadedSavedDistricts implements _LoadedSavedDistricts {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadedSavedDistricts &&
+            other is _$LoadedSavedDistrictsImpl &&
             const DeepCollectionEquality()
                 .equals(other._districts, _districts));
   }
@@ -1896,9 +1891,11 @@ class _$_LoadedSavedDistricts implements _LoadedSavedDistricts {
 
   @JsonKey(ignore: true)
   @override
-  _$$_LoadedSavedDistrictsCopyWith<_$_LoadedSavedDistricts> get copyWith =>
-      __$$_LoadedSavedDistrictsCopyWithImpl<_$_LoadedSavedDistricts>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$LoadedSavedDistrictsImplCopyWith<_$LoadedSavedDistrictsImpl>
+      get copyWith =>
+          __$$LoadedSavedDistrictsImplCopyWithImpl<_$LoadedSavedDistrictsImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1923,19 +1920,19 @@ class _$_LoadedSavedDistricts implements _LoadedSavedDistricts {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingCep,
-    TResult Function(CepEntity cep)? loadedCep,
-    TResult Function()? inexistentCepError,
-    TResult Function()? loadingSavedDistricts,
-    TResult Function(List<String> districts)? loadedSavedDistricts,
-    TResult Function()? loadingCepsByDistrict,
-    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
-    TResult Function()? savingCep,
-    TResult Function()? showSuccessSnackbar,
-    TResult Function()? showErrorSnackbar,
-    TResult Function()? loadingMap,
-    TResult Function(LatLng position)? mapLoaded,
+    TResult? Function()? initial,
+    TResult? Function()? loadingCep,
+    TResult? Function(CepEntity cep)? loadedCep,
+    TResult? Function()? inexistentCepError,
+    TResult? Function()? loadingSavedDistricts,
+    TResult? Function(List<String> districts)? loadedSavedDistricts,
+    TResult? Function()? loadingCepsByDistrict,
+    TResult? Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult? Function()? savingCep,
+    TResult? Function()? showSuccessSnackbar,
+    TResult? Function()? showErrorSnackbar,
+    TResult? Function()? loadingMap,
+    TResult? Function(LatLng position)? mapLoaded,
   }) {
     return loadedSavedDistricts?.call(districts);
   }
@@ -1989,19 +1986,19 @@ class _$_LoadedSavedDistricts implements _LoadedSavedDistricts {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingCep value)? loadingCep,
-    TResult Function(_LoadedCep value)? loadedCep,
-    TResult Function(_InexistentCepError value)? inexistentCepError,
-    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
-    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
-    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
-    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
-    TResult Function(_SavingCep value)? savingCep,
-    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
-    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
-    TResult Function(_LoadingMap value)? loadingMap,
-    TResult Function(_MapLoaded value)? mapLoaded,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingCep value)? loadingCep,
+    TResult? Function(_LoadedCep value)? loadedCep,
+    TResult? Function(_InexistentCepError value)? inexistentCepError,
+    TResult? Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult? Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult? Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult? Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult? Function(_SavingCep value)? savingCep,
+    TResult? Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult? Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult? Function(_LoadingMap value)? loadingMap,
+    TResult? Function(_MapLoaded value)? mapLoaded,
   }) {
     return loadedSavedDistricts?.call(this);
   }
@@ -2033,38 +2030,35 @@ class _$_LoadedSavedDistricts implements _LoadedSavedDistricts {
 
 abstract class _LoadedSavedDistricts implements CepState {
   const factory _LoadedSavedDistricts(final List<String> districts) =
-      _$_LoadedSavedDistricts;
+      _$LoadedSavedDistrictsImpl;
 
   List<String> get districts;
   @JsonKey(ignore: true)
-  _$$_LoadedSavedDistrictsCopyWith<_$_LoadedSavedDistricts> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LoadedSavedDistrictsImplCopyWith<_$LoadedSavedDistrictsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_LoadingCepsByDistrictCopyWith<$Res> {
-  factory _$$_LoadingCepsByDistrictCopyWith(_$_LoadingCepsByDistrict value,
-          $Res Function(_$_LoadingCepsByDistrict) then) =
-      __$$_LoadingCepsByDistrictCopyWithImpl<$Res>;
+abstract class _$$LoadingCepsByDistrictImplCopyWith<$Res> {
+  factory _$$LoadingCepsByDistrictImplCopyWith(
+          _$LoadingCepsByDistrictImpl value,
+          $Res Function(_$LoadingCepsByDistrictImpl) then) =
+      __$$LoadingCepsByDistrictImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoadingCepsByDistrictCopyWithImpl<$Res>
-    extends _$CepStateCopyWithImpl<$Res>
-    implements _$$_LoadingCepsByDistrictCopyWith<$Res> {
-  __$$_LoadingCepsByDistrictCopyWithImpl(_$_LoadingCepsByDistrict _value,
-      $Res Function(_$_LoadingCepsByDistrict) _then)
-      : super(_value, (v) => _then(v as _$_LoadingCepsByDistrict));
-
-  @override
-  _$_LoadingCepsByDistrict get _value =>
-      super._value as _$_LoadingCepsByDistrict;
+class __$$LoadingCepsByDistrictImplCopyWithImpl<$Res>
+    extends _$CepStateCopyWithImpl<$Res, _$LoadingCepsByDistrictImpl>
+    implements _$$LoadingCepsByDistrictImplCopyWith<$Res> {
+  __$$LoadingCepsByDistrictImplCopyWithImpl(_$LoadingCepsByDistrictImpl _value,
+      $Res Function(_$LoadingCepsByDistrictImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_LoadingCepsByDistrict implements _LoadingCepsByDistrict {
-  const _$_LoadingCepsByDistrict();
+class _$LoadingCepsByDistrictImpl implements _LoadingCepsByDistrict {
+  const _$LoadingCepsByDistrictImpl();
 
   @override
   String toString() {
@@ -2072,9 +2066,10 @@ class _$_LoadingCepsByDistrict implements _LoadingCepsByDistrict {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_LoadingCepsByDistrict);
+        (other.runtimeType == runtimeType &&
+            other is _$LoadingCepsByDistrictImpl);
   }
 
   @override
@@ -2103,19 +2098,19 @@ class _$_LoadingCepsByDistrict implements _LoadingCepsByDistrict {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingCep,
-    TResult Function(CepEntity cep)? loadedCep,
-    TResult Function()? inexistentCepError,
-    TResult Function()? loadingSavedDistricts,
-    TResult Function(List<String> districts)? loadedSavedDistricts,
-    TResult Function()? loadingCepsByDistrict,
-    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
-    TResult Function()? savingCep,
-    TResult Function()? showSuccessSnackbar,
-    TResult Function()? showErrorSnackbar,
-    TResult Function()? loadingMap,
-    TResult Function(LatLng position)? mapLoaded,
+    TResult? Function()? initial,
+    TResult? Function()? loadingCep,
+    TResult? Function(CepEntity cep)? loadedCep,
+    TResult? Function()? inexistentCepError,
+    TResult? Function()? loadingSavedDistricts,
+    TResult? Function(List<String> districts)? loadedSavedDistricts,
+    TResult? Function()? loadingCepsByDistrict,
+    TResult? Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult? Function()? savingCep,
+    TResult? Function()? showSuccessSnackbar,
+    TResult? Function()? showErrorSnackbar,
+    TResult? Function()? loadingMap,
+    TResult? Function(LatLng position)? mapLoaded,
   }) {
     return loadingCepsByDistrict?.call();
   }
@@ -2169,19 +2164,19 @@ class _$_LoadingCepsByDistrict implements _LoadingCepsByDistrict {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingCep value)? loadingCep,
-    TResult Function(_LoadedCep value)? loadedCep,
-    TResult Function(_InexistentCepError value)? inexistentCepError,
-    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
-    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
-    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
-    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
-    TResult Function(_SavingCep value)? savingCep,
-    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
-    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
-    TResult Function(_LoadingMap value)? loadingMap,
-    TResult Function(_MapLoaded value)? mapLoaded,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingCep value)? loadingCep,
+    TResult? Function(_LoadedCep value)? loadedCep,
+    TResult? Function(_InexistentCepError value)? inexistentCepError,
+    TResult? Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult? Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult? Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult? Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult? Function(_SavingCep value)? savingCep,
+    TResult? Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult? Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult? Function(_LoadingMap value)? loadingMap,
+    TResult? Function(_MapLoaded value)? mapLoaded,
   }) {
     return loadingCepsByDistrict?.call(this);
   }
@@ -2212,34 +2207,33 @@ class _$_LoadingCepsByDistrict implements _LoadingCepsByDistrict {
 }
 
 abstract class _LoadingCepsByDistrict implements CepState {
-  const factory _LoadingCepsByDistrict() = _$_LoadingCepsByDistrict;
+  const factory _LoadingCepsByDistrict() = _$LoadingCepsByDistrictImpl;
 }
 
 /// @nodoc
-abstract class _$$_LoadedCepsByDistrictCopyWith<$Res> {
-  factory _$$_LoadedCepsByDistrictCopyWith(_$_LoadedCepsByDistrict value,
-          $Res Function(_$_LoadedCepsByDistrict) then) =
-      __$$_LoadedCepsByDistrictCopyWithImpl<$Res>;
+abstract class _$$LoadedCepsByDistrictImplCopyWith<$Res> {
+  factory _$$LoadedCepsByDistrictImplCopyWith(_$LoadedCepsByDistrictImpl value,
+          $Res Function(_$LoadedCepsByDistrictImpl) then) =
+      __$$LoadedCepsByDistrictImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({List<CepEntity> ceps});
 }
 
 /// @nodoc
-class __$$_LoadedCepsByDistrictCopyWithImpl<$Res>
-    extends _$CepStateCopyWithImpl<$Res>
-    implements _$$_LoadedCepsByDistrictCopyWith<$Res> {
-  __$$_LoadedCepsByDistrictCopyWithImpl(_$_LoadedCepsByDistrict _value,
-      $Res Function(_$_LoadedCepsByDistrict) _then)
-      : super(_value, (v) => _then(v as _$_LoadedCepsByDistrict));
+class __$$LoadedCepsByDistrictImplCopyWithImpl<$Res>
+    extends _$CepStateCopyWithImpl<$Res, _$LoadedCepsByDistrictImpl>
+    implements _$$LoadedCepsByDistrictImplCopyWith<$Res> {
+  __$$LoadedCepsByDistrictImplCopyWithImpl(_$LoadedCepsByDistrictImpl _value,
+      $Res Function(_$LoadedCepsByDistrictImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_LoadedCepsByDistrict get _value => super._value as _$_LoadedCepsByDistrict;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ceps = freezed,
+    Object? ceps = null,
   }) {
-    return _then(_$_LoadedCepsByDistrict(
-      ceps == freezed
+    return _then(_$LoadedCepsByDistrictImpl(
+      null == ceps
           ? _value._ceps
           : ceps // ignore: cast_nullable_to_non_nullable
               as List<CepEntity>,
@@ -2249,12 +2243,13 @@ class __$$_LoadedCepsByDistrictCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoadedCepsByDistrict implements _LoadedCepsByDistrict {
-  const _$_LoadedCepsByDistrict(final List<CepEntity> ceps) : _ceps = ceps;
+class _$LoadedCepsByDistrictImpl implements _LoadedCepsByDistrict {
+  const _$LoadedCepsByDistrictImpl(final List<CepEntity> ceps) : _ceps = ceps;
 
   final List<CepEntity> _ceps;
   @override
   List<CepEntity> get ceps {
+    if (_ceps is EqualUnmodifiableListView) return _ceps;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_ceps);
   }
@@ -2265,10 +2260,10 @@ class _$_LoadedCepsByDistrict implements _LoadedCepsByDistrict {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadedCepsByDistrict &&
+            other is _$LoadedCepsByDistrictImpl &&
             const DeepCollectionEquality().equals(other._ceps, _ceps));
   }
 
@@ -2278,9 +2273,11 @@ class _$_LoadedCepsByDistrict implements _LoadedCepsByDistrict {
 
   @JsonKey(ignore: true)
   @override
-  _$$_LoadedCepsByDistrictCopyWith<_$_LoadedCepsByDistrict> get copyWith =>
-      __$$_LoadedCepsByDistrictCopyWithImpl<_$_LoadedCepsByDistrict>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$LoadedCepsByDistrictImplCopyWith<_$LoadedCepsByDistrictImpl>
+      get copyWith =>
+          __$$LoadedCepsByDistrictImplCopyWithImpl<_$LoadedCepsByDistrictImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2305,19 +2302,19 @@ class _$_LoadedCepsByDistrict implements _LoadedCepsByDistrict {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingCep,
-    TResult Function(CepEntity cep)? loadedCep,
-    TResult Function()? inexistentCepError,
-    TResult Function()? loadingSavedDistricts,
-    TResult Function(List<String> districts)? loadedSavedDistricts,
-    TResult Function()? loadingCepsByDistrict,
-    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
-    TResult Function()? savingCep,
-    TResult Function()? showSuccessSnackbar,
-    TResult Function()? showErrorSnackbar,
-    TResult Function()? loadingMap,
-    TResult Function(LatLng position)? mapLoaded,
+    TResult? Function()? initial,
+    TResult? Function()? loadingCep,
+    TResult? Function(CepEntity cep)? loadedCep,
+    TResult? Function()? inexistentCepError,
+    TResult? Function()? loadingSavedDistricts,
+    TResult? Function(List<String> districts)? loadedSavedDistricts,
+    TResult? Function()? loadingCepsByDistrict,
+    TResult? Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult? Function()? savingCep,
+    TResult? Function()? showSuccessSnackbar,
+    TResult? Function()? showErrorSnackbar,
+    TResult? Function()? loadingMap,
+    TResult? Function(LatLng position)? mapLoaded,
   }) {
     return loadedCepsByDistrict?.call(ceps);
   }
@@ -2371,19 +2368,19 @@ class _$_LoadedCepsByDistrict implements _LoadedCepsByDistrict {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingCep value)? loadingCep,
-    TResult Function(_LoadedCep value)? loadedCep,
-    TResult Function(_InexistentCepError value)? inexistentCepError,
-    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
-    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
-    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
-    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
-    TResult Function(_SavingCep value)? savingCep,
-    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
-    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
-    TResult Function(_LoadingMap value)? loadingMap,
-    TResult Function(_MapLoaded value)? mapLoaded,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingCep value)? loadingCep,
+    TResult? Function(_LoadedCep value)? loadedCep,
+    TResult? Function(_InexistentCepError value)? inexistentCepError,
+    TResult? Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult? Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult? Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult? Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult? Function(_SavingCep value)? savingCep,
+    TResult? Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult? Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult? Function(_LoadingMap value)? loadingMap,
+    TResult? Function(_MapLoaded value)? mapLoaded,
   }) {
     return loadedCepsByDistrict?.call(this);
   }
@@ -2415,36 +2412,34 @@ class _$_LoadedCepsByDistrict implements _LoadedCepsByDistrict {
 
 abstract class _LoadedCepsByDistrict implements CepState {
   const factory _LoadedCepsByDistrict(final List<CepEntity> ceps) =
-      _$_LoadedCepsByDistrict;
+      _$LoadedCepsByDistrictImpl;
 
   List<CepEntity> get ceps;
   @JsonKey(ignore: true)
-  _$$_LoadedCepsByDistrictCopyWith<_$_LoadedCepsByDistrict> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LoadedCepsByDistrictImplCopyWith<_$LoadedCepsByDistrictImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SavingCepCopyWith<$Res> {
-  factory _$$_SavingCepCopyWith(
-          _$_SavingCep value, $Res Function(_$_SavingCep) then) =
-      __$$_SavingCepCopyWithImpl<$Res>;
+abstract class _$$SavingCepImplCopyWith<$Res> {
+  factory _$$SavingCepImplCopyWith(
+          _$SavingCepImpl value, $Res Function(_$SavingCepImpl) then) =
+      __$$SavingCepImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_SavingCepCopyWithImpl<$Res> extends _$CepStateCopyWithImpl<$Res>
-    implements _$$_SavingCepCopyWith<$Res> {
-  __$$_SavingCepCopyWithImpl(
-      _$_SavingCep _value, $Res Function(_$_SavingCep) _then)
-      : super(_value, (v) => _then(v as _$_SavingCep));
-
-  @override
-  _$_SavingCep get _value => super._value as _$_SavingCep;
+class __$$SavingCepImplCopyWithImpl<$Res>
+    extends _$CepStateCopyWithImpl<$Res, _$SavingCepImpl>
+    implements _$$SavingCepImplCopyWith<$Res> {
+  __$$SavingCepImplCopyWithImpl(
+      _$SavingCepImpl _value, $Res Function(_$SavingCepImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_SavingCep implements _SavingCep {
-  const _$_SavingCep();
+class _$SavingCepImpl implements _SavingCep {
+  const _$SavingCepImpl();
 
   @override
   String toString() {
@@ -2452,9 +2447,9 @@ class _$_SavingCep implements _SavingCep {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_SavingCep);
+        (other.runtimeType == runtimeType && other is _$SavingCepImpl);
   }
 
   @override
@@ -2483,19 +2478,19 @@ class _$_SavingCep implements _SavingCep {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingCep,
-    TResult Function(CepEntity cep)? loadedCep,
-    TResult Function()? inexistentCepError,
-    TResult Function()? loadingSavedDistricts,
-    TResult Function(List<String> districts)? loadedSavedDistricts,
-    TResult Function()? loadingCepsByDistrict,
-    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
-    TResult Function()? savingCep,
-    TResult Function()? showSuccessSnackbar,
-    TResult Function()? showErrorSnackbar,
-    TResult Function()? loadingMap,
-    TResult Function(LatLng position)? mapLoaded,
+    TResult? Function()? initial,
+    TResult? Function()? loadingCep,
+    TResult? Function(CepEntity cep)? loadedCep,
+    TResult? Function()? inexistentCepError,
+    TResult? Function()? loadingSavedDistricts,
+    TResult? Function(List<String> districts)? loadedSavedDistricts,
+    TResult? Function()? loadingCepsByDistrict,
+    TResult? Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult? Function()? savingCep,
+    TResult? Function()? showSuccessSnackbar,
+    TResult? Function()? showErrorSnackbar,
+    TResult? Function()? loadingMap,
+    TResult? Function(LatLng position)? mapLoaded,
   }) {
     return savingCep?.call();
   }
@@ -2549,19 +2544,19 @@ class _$_SavingCep implements _SavingCep {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingCep value)? loadingCep,
-    TResult Function(_LoadedCep value)? loadedCep,
-    TResult Function(_InexistentCepError value)? inexistentCepError,
-    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
-    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
-    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
-    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
-    TResult Function(_SavingCep value)? savingCep,
-    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
-    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
-    TResult Function(_LoadingMap value)? loadingMap,
-    TResult Function(_MapLoaded value)? mapLoaded,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingCep value)? loadingCep,
+    TResult? Function(_LoadedCep value)? loadedCep,
+    TResult? Function(_InexistentCepError value)? inexistentCepError,
+    TResult? Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult? Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult? Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult? Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult? Function(_SavingCep value)? savingCep,
+    TResult? Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult? Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult? Function(_LoadingMap value)? loadingMap,
+    TResult? Function(_MapLoaded value)? mapLoaded,
   }) {
     return savingCep?.call(this);
   }
@@ -2592,32 +2587,29 @@ class _$_SavingCep implements _SavingCep {
 }
 
 abstract class _SavingCep implements CepState {
-  const factory _SavingCep() = _$_SavingCep;
+  const factory _SavingCep() = _$SavingCepImpl;
 }
 
 /// @nodoc
-abstract class _$$_ShowSuccessSnackbarCopyWith<$Res> {
-  factory _$$_ShowSuccessSnackbarCopyWith(_$_ShowSuccessSnackbar value,
-          $Res Function(_$_ShowSuccessSnackbar) then) =
-      __$$_ShowSuccessSnackbarCopyWithImpl<$Res>;
+abstract class _$$ShowSuccessSnackbarImplCopyWith<$Res> {
+  factory _$$ShowSuccessSnackbarImplCopyWith(_$ShowSuccessSnackbarImpl value,
+          $Res Function(_$ShowSuccessSnackbarImpl) then) =
+      __$$ShowSuccessSnackbarImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_ShowSuccessSnackbarCopyWithImpl<$Res>
-    extends _$CepStateCopyWithImpl<$Res>
-    implements _$$_ShowSuccessSnackbarCopyWith<$Res> {
-  __$$_ShowSuccessSnackbarCopyWithImpl(_$_ShowSuccessSnackbar _value,
-      $Res Function(_$_ShowSuccessSnackbar) _then)
-      : super(_value, (v) => _then(v as _$_ShowSuccessSnackbar));
-
-  @override
-  _$_ShowSuccessSnackbar get _value => super._value as _$_ShowSuccessSnackbar;
+class __$$ShowSuccessSnackbarImplCopyWithImpl<$Res>
+    extends _$CepStateCopyWithImpl<$Res, _$ShowSuccessSnackbarImpl>
+    implements _$$ShowSuccessSnackbarImplCopyWith<$Res> {
+  __$$ShowSuccessSnackbarImplCopyWithImpl(_$ShowSuccessSnackbarImpl _value,
+      $Res Function(_$ShowSuccessSnackbarImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_ShowSuccessSnackbar implements _ShowSuccessSnackbar {
-  const _$_ShowSuccessSnackbar();
+class _$ShowSuccessSnackbarImpl implements _ShowSuccessSnackbar {
+  const _$ShowSuccessSnackbarImpl();
 
   @override
   String toString() {
@@ -2625,9 +2617,10 @@ class _$_ShowSuccessSnackbar implements _ShowSuccessSnackbar {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_ShowSuccessSnackbar);
+        (other.runtimeType == runtimeType &&
+            other is _$ShowSuccessSnackbarImpl);
   }
 
   @override
@@ -2656,19 +2649,19 @@ class _$_ShowSuccessSnackbar implements _ShowSuccessSnackbar {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingCep,
-    TResult Function(CepEntity cep)? loadedCep,
-    TResult Function()? inexistentCepError,
-    TResult Function()? loadingSavedDistricts,
-    TResult Function(List<String> districts)? loadedSavedDistricts,
-    TResult Function()? loadingCepsByDistrict,
-    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
-    TResult Function()? savingCep,
-    TResult Function()? showSuccessSnackbar,
-    TResult Function()? showErrorSnackbar,
-    TResult Function()? loadingMap,
-    TResult Function(LatLng position)? mapLoaded,
+    TResult? Function()? initial,
+    TResult? Function()? loadingCep,
+    TResult? Function(CepEntity cep)? loadedCep,
+    TResult? Function()? inexistentCepError,
+    TResult? Function()? loadingSavedDistricts,
+    TResult? Function(List<String> districts)? loadedSavedDistricts,
+    TResult? Function()? loadingCepsByDistrict,
+    TResult? Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult? Function()? savingCep,
+    TResult? Function()? showSuccessSnackbar,
+    TResult? Function()? showErrorSnackbar,
+    TResult? Function()? loadingMap,
+    TResult? Function(LatLng position)? mapLoaded,
   }) {
     return showSuccessSnackbar?.call();
   }
@@ -2722,19 +2715,19 @@ class _$_ShowSuccessSnackbar implements _ShowSuccessSnackbar {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingCep value)? loadingCep,
-    TResult Function(_LoadedCep value)? loadedCep,
-    TResult Function(_InexistentCepError value)? inexistentCepError,
-    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
-    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
-    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
-    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
-    TResult Function(_SavingCep value)? savingCep,
-    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
-    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
-    TResult Function(_LoadingMap value)? loadingMap,
-    TResult Function(_MapLoaded value)? mapLoaded,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingCep value)? loadingCep,
+    TResult? Function(_LoadedCep value)? loadedCep,
+    TResult? Function(_InexistentCepError value)? inexistentCepError,
+    TResult? Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult? Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult? Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult? Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult? Function(_SavingCep value)? savingCep,
+    TResult? Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult? Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult? Function(_LoadingMap value)? loadingMap,
+    TResult? Function(_MapLoaded value)? mapLoaded,
   }) {
     return showSuccessSnackbar?.call(this);
   }
@@ -2765,32 +2758,29 @@ class _$_ShowSuccessSnackbar implements _ShowSuccessSnackbar {
 }
 
 abstract class _ShowSuccessSnackbar implements CepState {
-  const factory _ShowSuccessSnackbar() = _$_ShowSuccessSnackbar;
+  const factory _ShowSuccessSnackbar() = _$ShowSuccessSnackbarImpl;
 }
 
 /// @nodoc
-abstract class _$$_ShowErrorSnackbarCopyWith<$Res> {
-  factory _$$_ShowErrorSnackbarCopyWith(_$_ShowErrorSnackbar value,
-          $Res Function(_$_ShowErrorSnackbar) then) =
-      __$$_ShowErrorSnackbarCopyWithImpl<$Res>;
+abstract class _$$ShowErrorSnackbarImplCopyWith<$Res> {
+  factory _$$ShowErrorSnackbarImplCopyWith(_$ShowErrorSnackbarImpl value,
+          $Res Function(_$ShowErrorSnackbarImpl) then) =
+      __$$ShowErrorSnackbarImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_ShowErrorSnackbarCopyWithImpl<$Res>
-    extends _$CepStateCopyWithImpl<$Res>
-    implements _$$_ShowErrorSnackbarCopyWith<$Res> {
-  __$$_ShowErrorSnackbarCopyWithImpl(
-      _$_ShowErrorSnackbar _value, $Res Function(_$_ShowErrorSnackbar) _then)
-      : super(_value, (v) => _then(v as _$_ShowErrorSnackbar));
-
-  @override
-  _$_ShowErrorSnackbar get _value => super._value as _$_ShowErrorSnackbar;
+class __$$ShowErrorSnackbarImplCopyWithImpl<$Res>
+    extends _$CepStateCopyWithImpl<$Res, _$ShowErrorSnackbarImpl>
+    implements _$$ShowErrorSnackbarImplCopyWith<$Res> {
+  __$$ShowErrorSnackbarImplCopyWithImpl(_$ShowErrorSnackbarImpl _value,
+      $Res Function(_$ShowErrorSnackbarImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_ShowErrorSnackbar implements _ShowErrorSnackbar {
-  const _$_ShowErrorSnackbar();
+class _$ShowErrorSnackbarImpl implements _ShowErrorSnackbar {
+  const _$ShowErrorSnackbarImpl();
 
   @override
   String toString() {
@@ -2798,9 +2788,9 @@ class _$_ShowErrorSnackbar implements _ShowErrorSnackbar {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_ShowErrorSnackbar);
+        (other.runtimeType == runtimeType && other is _$ShowErrorSnackbarImpl);
   }
 
   @override
@@ -2829,19 +2819,19 @@ class _$_ShowErrorSnackbar implements _ShowErrorSnackbar {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingCep,
-    TResult Function(CepEntity cep)? loadedCep,
-    TResult Function()? inexistentCepError,
-    TResult Function()? loadingSavedDistricts,
-    TResult Function(List<String> districts)? loadedSavedDistricts,
-    TResult Function()? loadingCepsByDistrict,
-    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
-    TResult Function()? savingCep,
-    TResult Function()? showSuccessSnackbar,
-    TResult Function()? showErrorSnackbar,
-    TResult Function()? loadingMap,
-    TResult Function(LatLng position)? mapLoaded,
+    TResult? Function()? initial,
+    TResult? Function()? loadingCep,
+    TResult? Function(CepEntity cep)? loadedCep,
+    TResult? Function()? inexistentCepError,
+    TResult? Function()? loadingSavedDistricts,
+    TResult? Function(List<String> districts)? loadedSavedDistricts,
+    TResult? Function()? loadingCepsByDistrict,
+    TResult? Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult? Function()? savingCep,
+    TResult? Function()? showSuccessSnackbar,
+    TResult? Function()? showErrorSnackbar,
+    TResult? Function()? loadingMap,
+    TResult? Function(LatLng position)? mapLoaded,
   }) {
     return showErrorSnackbar?.call();
   }
@@ -2895,19 +2885,19 @@ class _$_ShowErrorSnackbar implements _ShowErrorSnackbar {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingCep value)? loadingCep,
-    TResult Function(_LoadedCep value)? loadedCep,
-    TResult Function(_InexistentCepError value)? inexistentCepError,
-    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
-    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
-    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
-    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
-    TResult Function(_SavingCep value)? savingCep,
-    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
-    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
-    TResult Function(_LoadingMap value)? loadingMap,
-    TResult Function(_MapLoaded value)? mapLoaded,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingCep value)? loadingCep,
+    TResult? Function(_LoadedCep value)? loadedCep,
+    TResult? Function(_InexistentCepError value)? inexistentCepError,
+    TResult? Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult? Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult? Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult? Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult? Function(_SavingCep value)? savingCep,
+    TResult? Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult? Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult? Function(_LoadingMap value)? loadingMap,
+    TResult? Function(_MapLoaded value)? mapLoaded,
   }) {
     return showErrorSnackbar?.call(this);
   }
@@ -2938,31 +2928,29 @@ class _$_ShowErrorSnackbar implements _ShowErrorSnackbar {
 }
 
 abstract class _ShowErrorSnackbar implements CepState {
-  const factory _ShowErrorSnackbar() = _$_ShowErrorSnackbar;
+  const factory _ShowErrorSnackbar() = _$ShowErrorSnackbarImpl;
 }
 
 /// @nodoc
-abstract class _$$_LoadingMapCopyWith<$Res> {
-  factory _$$_LoadingMapCopyWith(
-          _$_LoadingMap value, $Res Function(_$_LoadingMap) then) =
-      __$$_LoadingMapCopyWithImpl<$Res>;
+abstract class _$$LoadingMapImplCopyWith<$Res> {
+  factory _$$LoadingMapImplCopyWith(
+          _$LoadingMapImpl value, $Res Function(_$LoadingMapImpl) then) =
+      __$$LoadingMapImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoadingMapCopyWithImpl<$Res> extends _$CepStateCopyWithImpl<$Res>
-    implements _$$_LoadingMapCopyWith<$Res> {
-  __$$_LoadingMapCopyWithImpl(
-      _$_LoadingMap _value, $Res Function(_$_LoadingMap) _then)
-      : super(_value, (v) => _then(v as _$_LoadingMap));
-
-  @override
-  _$_LoadingMap get _value => super._value as _$_LoadingMap;
+class __$$LoadingMapImplCopyWithImpl<$Res>
+    extends _$CepStateCopyWithImpl<$Res, _$LoadingMapImpl>
+    implements _$$LoadingMapImplCopyWith<$Res> {
+  __$$LoadingMapImplCopyWithImpl(
+      _$LoadingMapImpl _value, $Res Function(_$LoadingMapImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_LoadingMap implements _LoadingMap {
-  const _$_LoadingMap();
+class _$LoadingMapImpl implements _LoadingMap {
+  const _$LoadingMapImpl();
 
   @override
   String toString() {
@@ -2970,9 +2958,9 @@ class _$_LoadingMap implements _LoadingMap {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_LoadingMap);
+        (other.runtimeType == runtimeType && other is _$LoadingMapImpl);
   }
 
   @override
@@ -3001,19 +2989,19 @@ class _$_LoadingMap implements _LoadingMap {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingCep,
-    TResult Function(CepEntity cep)? loadedCep,
-    TResult Function()? inexistentCepError,
-    TResult Function()? loadingSavedDistricts,
-    TResult Function(List<String> districts)? loadedSavedDistricts,
-    TResult Function()? loadingCepsByDistrict,
-    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
-    TResult Function()? savingCep,
-    TResult Function()? showSuccessSnackbar,
-    TResult Function()? showErrorSnackbar,
-    TResult Function()? loadingMap,
-    TResult Function(LatLng position)? mapLoaded,
+    TResult? Function()? initial,
+    TResult? Function()? loadingCep,
+    TResult? Function(CepEntity cep)? loadedCep,
+    TResult? Function()? inexistentCepError,
+    TResult? Function()? loadingSavedDistricts,
+    TResult? Function(List<String> districts)? loadedSavedDistricts,
+    TResult? Function()? loadingCepsByDistrict,
+    TResult? Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult? Function()? savingCep,
+    TResult? Function()? showSuccessSnackbar,
+    TResult? Function()? showErrorSnackbar,
+    TResult? Function()? loadingMap,
+    TResult? Function(LatLng position)? mapLoaded,
   }) {
     return loadingMap?.call();
   }
@@ -3067,19 +3055,19 @@ class _$_LoadingMap implements _LoadingMap {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingCep value)? loadingCep,
-    TResult Function(_LoadedCep value)? loadedCep,
-    TResult Function(_InexistentCepError value)? inexistentCepError,
-    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
-    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
-    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
-    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
-    TResult Function(_SavingCep value)? savingCep,
-    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
-    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
-    TResult Function(_LoadingMap value)? loadingMap,
-    TResult Function(_MapLoaded value)? mapLoaded,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingCep value)? loadingCep,
+    TResult? Function(_LoadedCep value)? loadedCep,
+    TResult? Function(_InexistentCepError value)? inexistentCepError,
+    TResult? Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult? Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult? Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult? Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult? Function(_SavingCep value)? savingCep,
+    TResult? Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult? Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult? Function(_LoadingMap value)? loadingMap,
+    TResult? Function(_MapLoaded value)? mapLoaded,
   }) {
     return loadingMap?.call(this);
   }
@@ -3110,33 +3098,33 @@ class _$_LoadingMap implements _LoadingMap {
 }
 
 abstract class _LoadingMap implements CepState {
-  const factory _LoadingMap() = _$_LoadingMap;
+  const factory _LoadingMap() = _$LoadingMapImpl;
 }
 
 /// @nodoc
-abstract class _$$_MapLoadedCopyWith<$Res> {
-  factory _$$_MapLoadedCopyWith(
-          _$_MapLoaded value, $Res Function(_$_MapLoaded) then) =
-      __$$_MapLoadedCopyWithImpl<$Res>;
+abstract class _$$MapLoadedImplCopyWith<$Res> {
+  factory _$$MapLoadedImplCopyWith(
+          _$MapLoadedImpl value, $Res Function(_$MapLoadedImpl) then) =
+      __$$MapLoadedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({LatLng position});
 }
 
 /// @nodoc
-class __$$_MapLoadedCopyWithImpl<$Res> extends _$CepStateCopyWithImpl<$Res>
-    implements _$$_MapLoadedCopyWith<$Res> {
-  __$$_MapLoadedCopyWithImpl(
-      _$_MapLoaded _value, $Res Function(_$_MapLoaded) _then)
-      : super(_value, (v) => _then(v as _$_MapLoaded));
+class __$$MapLoadedImplCopyWithImpl<$Res>
+    extends _$CepStateCopyWithImpl<$Res, _$MapLoadedImpl>
+    implements _$$MapLoadedImplCopyWith<$Res> {
+  __$$MapLoadedImplCopyWithImpl(
+      _$MapLoadedImpl _value, $Res Function(_$MapLoadedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_MapLoaded get _value => super._value as _$_MapLoaded;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? position = freezed,
+    Object? position = null,
   }) {
-    return _then(_$_MapLoaded(
-      position == freezed
+    return _then(_$MapLoadedImpl(
+      null == position
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
               as LatLng,
@@ -3146,8 +3134,8 @@ class __$$_MapLoadedCopyWithImpl<$Res> extends _$CepStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_MapLoaded implements _MapLoaded {
-  const _$_MapLoaded(this.position);
+class _$MapLoadedImpl implements _MapLoaded {
+  const _$MapLoadedImpl(this.position);
 
   @override
   final LatLng position;
@@ -3158,21 +3146,22 @@ class _$_MapLoaded implements _MapLoaded {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MapLoaded &&
-            const DeepCollectionEquality().equals(other.position, position));
+            other is _$MapLoadedImpl &&
+            (identical(other.position, position) ||
+                other.position == position));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(position));
+  int get hashCode => Object.hash(runtimeType, position);
 
   @JsonKey(ignore: true)
   @override
-  _$$_MapLoadedCopyWith<_$_MapLoaded> get copyWith =>
-      __$$_MapLoadedCopyWithImpl<_$_MapLoaded>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$MapLoadedImplCopyWith<_$MapLoadedImpl> get copyWith =>
+      __$$MapLoadedImplCopyWithImpl<_$MapLoadedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3197,19 +3186,19 @@ class _$_MapLoaded implements _MapLoaded {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingCep,
-    TResult Function(CepEntity cep)? loadedCep,
-    TResult Function()? inexistentCepError,
-    TResult Function()? loadingSavedDistricts,
-    TResult Function(List<String> districts)? loadedSavedDistricts,
-    TResult Function()? loadingCepsByDistrict,
-    TResult Function(List<CepEntity> ceps)? loadedCepsByDistrict,
-    TResult Function()? savingCep,
-    TResult Function()? showSuccessSnackbar,
-    TResult Function()? showErrorSnackbar,
-    TResult Function()? loadingMap,
-    TResult Function(LatLng position)? mapLoaded,
+    TResult? Function()? initial,
+    TResult? Function()? loadingCep,
+    TResult? Function(CepEntity cep)? loadedCep,
+    TResult? Function()? inexistentCepError,
+    TResult? Function()? loadingSavedDistricts,
+    TResult? Function(List<String> districts)? loadedSavedDistricts,
+    TResult? Function()? loadingCepsByDistrict,
+    TResult? Function(List<CepEntity> ceps)? loadedCepsByDistrict,
+    TResult? Function()? savingCep,
+    TResult? Function()? showSuccessSnackbar,
+    TResult? Function()? showErrorSnackbar,
+    TResult? Function()? loadingMap,
+    TResult? Function(LatLng position)? mapLoaded,
   }) {
     return mapLoaded?.call(position);
   }
@@ -3263,19 +3252,19 @@ class _$_MapLoaded implements _MapLoaded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingCep value)? loadingCep,
-    TResult Function(_LoadedCep value)? loadedCep,
-    TResult Function(_InexistentCepError value)? inexistentCepError,
-    TResult Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
-    TResult Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
-    TResult Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
-    TResult Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
-    TResult Function(_SavingCep value)? savingCep,
-    TResult Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
-    TResult Function(_ShowErrorSnackbar value)? showErrorSnackbar,
-    TResult Function(_LoadingMap value)? loadingMap,
-    TResult Function(_MapLoaded value)? mapLoaded,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingCep value)? loadingCep,
+    TResult? Function(_LoadedCep value)? loadedCep,
+    TResult? Function(_InexistentCepError value)? inexistentCepError,
+    TResult? Function(_LoadingSavedDistricts value)? loadingSavedDistricts,
+    TResult? Function(_LoadedSavedDistricts value)? loadedSavedDistricts,
+    TResult? Function(_LoadingCepsByDistrict value)? loadingCepsByDistrict,
+    TResult? Function(_LoadedCepsByDistrict value)? loadedCepsByDistrict,
+    TResult? Function(_SavingCep value)? savingCep,
+    TResult? Function(_ShowSuccessSnackbar value)? showSuccessSnackbar,
+    TResult? Function(_ShowErrorSnackbar value)? showErrorSnackbar,
+    TResult? Function(_LoadingMap value)? loadingMap,
+    TResult? Function(_MapLoaded value)? mapLoaded,
   }) {
     return mapLoaded?.call(this);
   }
@@ -3306,10 +3295,10 @@ class _$_MapLoaded implements _MapLoaded {
 }
 
 abstract class _MapLoaded implements CepState {
-  const factory _MapLoaded(final LatLng position) = _$_MapLoaded;
+  const factory _MapLoaded(final LatLng position) = _$MapLoadedImpl;
 
   LatLng get position;
   @JsonKey(ignore: true)
-  _$$_MapLoadedCopyWith<_$_MapLoaded> get copyWith =>
+  _$$MapLoadedImplCopyWith<_$MapLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

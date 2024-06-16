@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 
 class SaveSuccessSnackbar extends SnackBar {
   SaveSuccessSnackbar({
-    Key? key,
+    super.key,
     required BuildContext context,
     String message = 'Cep salvo com sucesso!',
   }) : super(
-          key: key,
           backgroundColor: Theme.of(context).colorScheme.tertiary,
           content: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -14,7 +13,7 @@ class SaveSuccessSnackbar extends SnackBar {
               Flexible(
                 child: Text(
                   message,
-                  style: Theme.of(context).textTheme.subtitle2,
+                  style: Theme.of(context).textTheme.titleSmall,
                 ),
               ),
               TextButton(
@@ -25,7 +24,7 @@ class SaveSuccessSnackbar extends SnackBar {
                 },
                 child: Text(
                   'Ok',
-                  style: Theme.of(context).textTheme.subtitle2,
+                  style: Theme.of(context).textTheme.titleSmall,
                 ),
               )
             ],

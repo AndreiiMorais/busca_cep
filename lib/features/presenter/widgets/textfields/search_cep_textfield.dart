@@ -6,11 +6,11 @@ class SearchCepTextfield extends StatelessWidget {
   final TextEditingController controller;
   final Function(String cep) onSubmitted;
   const SearchCepTextfield({
-    Key? key,
+    super.key,
     this.error,
     required this.controller,
     required this.onSubmitted,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

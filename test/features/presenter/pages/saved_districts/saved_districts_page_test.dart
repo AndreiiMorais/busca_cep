@@ -11,13 +11,11 @@ import 'package:flutter_test/flutter_test.dart';
 import '../../../../utils/mocks.dart';
 
 void main() {
-  late CepBloc bloc;
   late StreamController<CepState> state;
 
   setUp(() {
     state = StreamController<CepState>();
     Mocks.initializeBlocForTest(state);
-    bloc = serviceLocator();
   });
 
   tearDown(() {

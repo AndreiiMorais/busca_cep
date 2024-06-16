@@ -65,12 +65,12 @@ class CustomTheme {
       ),
       textTheme: const TextTheme(
         //Used on Snackbars
-        subtitle2: TextStyle(
+        titleSmall: TextStyle(
           color: primary,
           fontSize: 18,
         ),
-        subtitle1: TextStyle(color: Colors.black),
-        headline6: TextStyle(color: primary),
+        titleMedium: TextStyle(color: Colors.black),
+        titleLarge: TextStyle(color: primary),
       ),
       listTileTheme: const ListTileThemeData(
         textColor: primary,
