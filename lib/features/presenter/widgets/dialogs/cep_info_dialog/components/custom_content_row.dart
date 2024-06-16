@@ -16,12 +16,19 @@ class CustomContentRow extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Flexible(child: Text(leadingText)),
           Flexible(
-              child: Text(
-            trailingText,
-            textAlign: TextAlign.end,
-          )),
+            child: Text(
+              leadingText,
+              style: TextStyle(color: Theme.of(context).colorScheme.primary),
+            ),
+          ),
+          Flexible(
+            child: Text(
+              trailingText,
+              textAlign: TextAlign.end,
+              style: TextStyle(color: Theme.of(context).colorScheme.primary),
+            ),
+          ),
         ],
       ),
     );

@@ -132,41 +132,41 @@ class _SearchCepHomepageState extends State<SearchCepHomepage> {
               Flexible(
                 child: Image.asset('assets/address-search.jpg'),
               ),
-              SearchCepTextfield(
-                error: error,
-                controller: _controller,
-                onSubmitted: (cep) => _bloc.add(CepEvent.loadCepInfo(cep)),
-              ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Tooltip(
-                      message: 'Ver Salvos',
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.of(context).pushNamed('/districts');
-                          _bloc.add(const CepEvent.loadSavedDistricts());
-                        },
-                        child: const Icon(
-                          Icons.save,
-                        ),
-                      ),
-                    ),
-                    Tooltip(
-                      message: 'Buscar cep',
-                      child: ElevatedButton(
-                        onPressed: () => _bloc.add(
-                          CepEvent.loadCepInfo(
-                            _controller.text,
-                          ),
-                        ),
-                        child: const Icon(Icons.search),
-                      ),
-                    ),
-                  ],
+                padding: const EdgeInsets.only(top: 24.0),
+                child: SearchCepTextfield(
+                  error: error,
+                  controller: _controller,
+                  onSubmitted: (cep) => _bloc.add(CepEvent.loadCepInfo(cep)),
                 ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Tooltip(
+                    message: 'Ver Salvos',
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/districts');
+                        _bloc.add(const CepEvent.loadSavedDistricts());
+                      },
+                      child: const Icon(
+                        Icons.save,
+                      ),
+                    ),
+                  ),
+                  Tooltip(
+                    message: 'Buscar cep',
+                    child: ElevatedButton(
+                      onPressed: () => _bloc.add(
+                        CepEvent.loadCepInfo(
+                          _controller.text,
+                        ),
+                      ),
+                      child: const Icon(Icons.search),
+                    ),
+                  ),
+                ],
               )
             ],
           ),

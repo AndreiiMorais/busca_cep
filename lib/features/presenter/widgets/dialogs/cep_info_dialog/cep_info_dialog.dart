@@ -14,7 +14,10 @@ Future<T?> showCepInfoDialog<T>({
     builder: (context) {
       return AlertDialog(
         title: Center(
-          child: Text(cep.cep),
+          child: Text(
+            cep.cep,
+            style: TextStyle(color: Theme.of(context).colorScheme.primary),
+          ),
         ),
         content: Column(
           mainAxisSize: MainAxisSize.min,

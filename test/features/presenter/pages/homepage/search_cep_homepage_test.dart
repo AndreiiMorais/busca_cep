@@ -36,13 +36,6 @@ void main() {
 
   final column = find.byWidgetPredicate((widget) => _columnMatcher(widget));
 
-  final rowPadding = find.byWidgetPredicate(
-    (widget) => _paddingMatcher(
-      widget: widget,
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-    ),
-  );
-
   final row = find.byWidgetPredicate((widget) => _rowMatcher(widget));
 
   final savedsButton = find.byWidgetPredicate(
@@ -64,7 +57,6 @@ void main() {
       expect(image, findsOneWidget);
       expect(columnPadding, findsOneWidget);
       expect(column, findsOneWidget);
-      expect(rowPadding, findsOneWidget);
       expect(row, findsOneWidget);
       expect(savedsButton, findsOneWidget);
       expect(searchButton, findsOneWidget);

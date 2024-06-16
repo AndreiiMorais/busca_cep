@@ -26,6 +26,7 @@ class SearchCepTextfield extends StatelessWidget {
       keyboardType: TextInputType.number,
       textInputAction: TextInputAction.search,
       onSubmitted: onSubmitted,
+      style: const TextStyle(color: Colors.black),
     );
   }
 }
